@@ -63,7 +63,7 @@ main_page_head = '''
             color: #dadada;
         }
         .movie-tile:hover {
-            background-color: black;
+            background-color: #1a1a1a;
             cursor: pointer;
         }
         .image-tile:hover {
@@ -184,7 +184,7 @@ main_page_content = '''
       </div>
     </div>
     <div class="container">
-      <h5> If no response upon clicking the images, try closing the current tab and re-visit this site again :) </h5>
+      <h5> If no response upon clicking the images, try closing the current tab and re-visiting this site without "https://"  :) </h5>
       {movie_tiles}
       {image_tiles}
     </div>
