@@ -25,6 +25,18 @@ var SCHEDULE_LIST = [
     new Scheduler6(),
 ]
 
+$(window).focus(function() {
+    if (SOUND && !PAUSE) {
+        SOUND.play();
+    }
+});
+
+$(window).blur(function() {
+    if (SOUND){
+        SOUND.pause();
+    }
+});
+
 function changeInputStart(ele){
     var inputStart = parseFloat($(ele).val());
     if (SOUND) {
@@ -125,7 +137,7 @@ function render(timestamp) {
             requestAnimationFrame(render);
         } else if (PAUSE) {
             START = null;
-            SOUND.stop();
+            SOUND.pause();
         } else {
             $('#timestamp').html("");
             START = null;
