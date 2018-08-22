@@ -54,6 +54,7 @@ function playAudio(inputStart) {
 
     } else {
 
+        $("#loading_block").html("Loading... (it might take long)")
         LISTENER = new THREE.AudioListener();
         CAMERA.add( LISTENER );
         SOUND = new THREE.Audio( LISTENER );
@@ -65,6 +66,7 @@ function playAudio(inputStart) {
             // sound.setLoop( true );
             SOUND.setVolume( 2.0 );
             polyAnimate(inputStart);
+            $("#loading_block").html("");
         });
 
     }
