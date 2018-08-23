@@ -25,17 +25,6 @@ var SCHEDULE_LIST = [
     new Scheduler6(),
 ]
 
-$(window).focus(function() {
-    if (SOUND && !PAUSE) {
-        SOUND.play();
-    }
-});
-
-$(window).blur(function() {
-    if (SOUND){
-        SOUND.pause();
-    }
-});
 
 function changeInputStart(ele){
     var inputStart = parseFloat($(ele).val());
@@ -66,7 +55,7 @@ function playAudio(inputStart) {
 
     } else {
 
-        $("#loading_block").html("Loading... (it might take long)")
+        $("#loading_block").html(" Loading... loading... loading... <br> (it might takes up to 30 seconds to load it. Simply wait, or F5 to refresh the webpage.)")
         LISTENER = new THREE.AudioListener();
         CAMERA.add( LISTENER );
         SOUND = new THREE.Audio( LISTENER );
@@ -256,3 +245,15 @@ function onWindowResize() {
     RENDERER.setSize( WIDTH, HEIGHT );
 
 }
+
+// $(window).focus(function() {
+//     if (SOUND && !PAUSE) {
+//         SOUND.play();
+//     }
+// });
+
+// $(window).blur(function() {
+//     if (SOUND){
+//         SOUND.pause();
+//     }
+// });

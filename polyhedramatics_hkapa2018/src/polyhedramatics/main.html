@@ -32,7 +32,7 @@
           $( document ).ready(function() {
             init();
             initScene();
-
+            playAudio();
 
             // animate();
           })
@@ -50,15 +50,18 @@
                    onchange="javascript:changeInputStart(this);">
             <button onclick="javascript:playAudio();"> Play </button> &nbsp;
             <span style="color:white">  Time Lapse: <span id="timestamp"> </span>  &nbsp; &nbsp;
-                <span id="loading_block"> Click Play to start the animation. </span>
-
+                <h1>
+                <span id="loading_block">
+                    Click Play to start the animation.
+                </span>
+                </h1>
             </span>
 
-
-            <br>
+<!--
+            <br> -->
         </div>
         <hr>
-        <div id="main"> </div>
+        <div id="main">  </div>
     </body>
 
 </html>
