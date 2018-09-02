@@ -14,6 +14,7 @@ var Scheduler6 = function(startTime) {
         'againMeteors',
         'againShootMeteors',
         'hideSoundWave',
+        // 'formClusterWaves',
         'cameraWreck',
         'blackOut',
         'cleanEverything',
@@ -27,6 +28,7 @@ var Scheduler6 = function(startTime) {
         this.START + 13.0, //meteors again
         this.START + 13.0, //shoot again
         this.START + 26.0, // hide SoundWave
+        // this.START + 26.0, // formClusterWaves
         this.START + 26.0, //camera wreck 44 + 10sec
         this.START + 70, // blackout for 11 sec
         this.START + 75,
@@ -106,70 +108,69 @@ var Scheduler6 = function(startTime) {
         ]
     }
 
-    // //Harmonic Series, do not use music Clock to present
-    // this.backgroundClock = function(){
-    //     var center_pos = [0, 0, 2000],
-    //         radius = 600,
-    //         startAngle = Math.PI/2,
-    //         majorColor = 'yellow3';
+    //Unused
+    //Harmonic Series, do not use music Clock to present!!
+    this.backgroundClock = function(){
+        var center_pos = [0, 0, 2000],
+            radius = 600,
+            startAngle = Math.PI/2,
+            majorColor = 'yellow3';
 
-    //     var backgroundClock = new MusicClock(
-    //         center_pos, radius, startAngle, majorColor,
-    //         {
-    //             'dimEdgeColor': "black",
-    //             'shineNodeColor': 'lightblue',
-    //             'shineEdgeColor': 'black',
-    //             'dimNodeRadius': radius / 50,
-    //             'nodeColors': ["darkslategray", "darkslategray", "darkslategray", "darkslategray", "darkslategray", "darkslategray",
-    //                             "darkslategray", "darkslategray", "darkslategray", "darkslategray", "darkslategray", "darkslategray",]
-    //         }
-    //     );
-    //     backgroundClock.position.set(center_pos[0], center_pos[1], center_pos[2])
+        var backgroundClock = new MusicClock(
+            center_pos, radius, startAngle, majorColor,
+            {
+                'dimEdgeColor': "black",
+                'shineNodeColor': 'lightblue',
+                'shineEdgeColor': 'black',
+                'dimNodeRadius': radius / 50,
+                'nodeColors': ["darkslategray", "darkslategray", "darkslategray", "darkslategray", "darkslategray", "darkslategray",
+                                "darkslategray", "darkslategray", "darkslategray", "darkslategray", "darkslategray", "darkslategray",]
+            }
+        );
+        backgroundClock.position.set(center_pos[0], center_pos[1], center_pos[2])
+        backgroundClock.name = 'backgroundClock';
+        SCENE.add(backgroundClock);
 
-    //     backgroundClock.name = 'backgroundClock';
-    //     SCENE.add(backgroundClock);
 
+        var bpm = this.meteorSettings['bpm'];
+        var delayTime = this.meteorSettings['delayTime'];
+        var notes = this.meteorSettings['notes'];
 
-    //     var bpm = this.meteorSettings['bpm'];
-    //     var delayTime = this.meteorSettings['delayTime'];
+        var sumTime = this.meteorSettings['startShootingTime'];
+        for (var i = 0; i < notes.length; i++){
 
-    //     var notes = this.meteorSettings['notes'];
+            sumTime += delayTime[i] * bpm;
 
-    //     var sumTime = this.meteorSettings['startShootingTime'];
-    //     for (var i = 0; i < notes.length; i++){
+            var chord = [
+                            [notes[i], notes[i]]
+                        ];
 
-    //         sumTime += delayTime[i] * bpm;
+            TweenLite.delayedCall(
+                sumTime,
+                backgroundClock.pulse,
+                [chord, 3 * (1 + 2 / (i+1)), 1, 0, 3],
+                backgroundClock,
+            )
+        }
 
-    //         var chord = [
-    //                         [notes[i], notes[i]]
-    //                     ];
+        sumTime = this.meteorSettings['startShootingTime'] + 13.0;
+        for (var i = 0; i < notes.length; i++){
 
-    //         TweenLite.delayedCall(
-    //             sumTime,
-    //             backgroundClock.pulse,
-    //             [chord, 3 * (1 + 2 / (i+1)), 1, 0, 3],
-    //             backgroundClock,
-    //         )
-    //     }
+            sumTime += delayTime[i] * bpm;
 
-    //     sumTime = this.meteorSettings['startShootingTime'] + 13.0;
-    //     for (var i = 0; i < notes.length; i++){
+            var chord = [
+                            [notes[i], notes[i]]
+                        ];
 
-    //         sumTime += delayTime[i] * bpm;
+            TweenLite.delayedCall(
+                sumTime,
+                backgroundClock.pulse,
+                [chord, 3, 1, 0, 3],
+                backgroundClock,
+            )
+        }
 
-    //         var chord = [
-    //                         [notes[i], notes[i]]
-    //                     ];
-
-    //         TweenLite.delayedCall(
-    //             sumTime,
-    //             backgroundClock.pulse,
-    //             [chord, 3, 1, 0, 3],
-    //             backgroundClock,
-    //         )
-    //     }
-
-    // }
+    }
 
     this._initMeteors = function(name, delta, startShootingTime){
 
@@ -295,11 +296,92 @@ var Scheduler6 = function(startTime) {
     this.hideSoundWave = function(){
         // from 226
         var soundWave = SCENE.getObjectByName("highPitchSoundWave");
-        soundWave.changeParticleColor(
-            10, 'black', false
+        var t = new TimelineLite();
+        t.call(
+            soundWave.changeParticleColor,
+            [10, 'black', false],
+            soundWave,
+        ).call(
+            function() {
+                var obj = SCENE.getObjectByName("highPitchSoundWave");
+                SCENE.remove(obj);
+                disposeHierarchy(obj);
+            },
+            [],
+            this
         )
 
     }
+
+    //Unused
+    // cause an overload to web render :(
+    this.formClusterWaves = function(){
+        // from 226
+
+        // musicClock vertices settings
+        var r = 600,
+            center_pos = [0, 0, 2000],
+            startAngle = Math.PI/2;
+
+        var vertices = calPolygonVertices(
+            12, r*5, startAngle, false
+        );
+        for (var i = 0; i < vertices.length; i++) {
+            vertices[i] = [
+                center_pos[0] + vertices[i][0],
+                center_pos[1] + vertices[i][1],
+                center_pos[2]
+            ];
+        }
+        var chords = [['l'],
+                      ['r', 's'],
+                      ['s', 'd'],
+                      ['f'],
+                      ['f', 'l'],
+                      ['d', 'r'],
+                     ];
+
+        var noteMap = {
+            'd': 0,
+            'r': 2,
+            'm': 4,
+            'f': 5,
+            's': 7,
+            'l': 9,
+            't': 11,
+        };
+
+        // soundWave settings
+        var xNum = 5,
+            yNum = 5,
+            zNum = 3,
+            majorColor = 'pink',
+            size = 20,
+            dist = 100;
+
+
+
+        for (var i = 0; i < chords.length; i++) {
+
+            for (var j = 0; j < chords[i].length; j++) {
+
+                var center_pos = vertices[noteMap[chords[i][j]]];
+                var color = ColorMap[majorColor][Math.round(i/2) % ColorMap[majorColor].length];
+
+                var clusterWave = new SoundWave(
+                    center_pos, xNum, yNum, zNum, color, size, dist
+                );
+                clusterWave.name = 'clusterWave' + i + '_' + j;
+                SCENE.add(clusterWave);
+                console.log(i, j, center_pos)
+                // clusterWave.setGeometricMovement(1, 0, 50, 1);
+            }
+
+        }
+
+    }
+
+
     this.cameraWreck = function() {
         // from 226 to 270
         TweenLite.to(
@@ -346,17 +428,6 @@ var Scheduler6 = function(startTime) {
     this.blackOut = function() {
         // from 270 to 281
 
-        SCENE.fogDegree = 0.00;
-
-        TweenLite.to(
-            SCENE, 11,
-            {
-                fogDegree: 0.1,
-
-            }
-
-        )
-
         var colors = ["darkslategray", "olivedrab", 0xefd1b5];
         var times = [3.0, 6.0, 2.0];
 
@@ -375,7 +446,6 @@ var Scheduler6 = function(startTime) {
                     b: color3.b,
                     onUpdate: function(){
                         SCENE.background = new THREE.Color(SCENE.colorDegree);
-                        SCENE.fog = new THREE.FogExp2( SCENE.colorDegree, SCENE.fogDegree );
                     }
                 }
             )
@@ -385,8 +455,7 @@ var Scheduler6 = function(startTime) {
 
     this.cleanEverything = function(){
         // Scheduler5 stuff
-        var names = ["earthMelody", "earthMelody2", "earthMelody3",
-                     "highPitchSoundWave"];
+        var names = ["earthMelody", "earthMelody2", "earthMelody3"];
 
         var polyNum = 20;
         for (var i = 0; i < polyNum; i++){
@@ -394,7 +463,7 @@ var Scheduler6 = function(startTime) {
         }
 
         // Scheduler6 stuff
-        names.push("backgroundClock");
+        // names.push("backgroundClock");
 
         for (var i = 0; i < this.meteorSettings['notes'].length; i++){
             for (var j = 0; j < this.meteorSettings['center_pos'][i]['num']; j++){

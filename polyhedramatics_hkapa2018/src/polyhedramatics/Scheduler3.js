@@ -217,7 +217,8 @@ var Scheduler3 = function(startTime) {
                       ['r', 's'],
                       ['s', 'd'],
                       ['f'],
-                      ['s', 'l']
+                      ['f', 'l'],
+                      ['d', 'r'],
                      ];
 
         // pulse

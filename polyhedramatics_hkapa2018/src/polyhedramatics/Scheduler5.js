@@ -428,9 +428,9 @@ var Scheduler5 = function(startTime) {
             {
                 y: this.finalY,
                 onUpdate: function(){
-                    var t = Date.now();
-                    var x = Math.cos(scale * t) * dist;
-                    var z = Math.sin(scale * t) * dist;
+                    var dt = Date.now();
+                    var x = Math.cos(scale * dt) * dist;
+                    var z = Math.sin(scale * dt) * dist;
                     spiral.trailLine.advance(
                         pos2v([x, spiral.trailHeadPosition.y, z])
                     );
@@ -733,7 +733,7 @@ var Scheduler5 = function(startTime) {
         soundWave.name = 'highPitchSoundWave';
         SCENE.add(soundWave);
 
-        var totalTime = 45; //15 sec is better?
+        var totalTime = 15; //15 sec is better?
         delaySpeed = 0.02;
         magnitude = 1000;
         t_scale = 1;

@@ -5,7 +5,9 @@ var SCENE,
     CONTROLS,
     TIMELINE = null,
     RESTART = false,
-    PAUSE = false;
+    PAUSE = false,
+    WITH_INTRO = false,
+    INTRO_TIME = 30;
 
 var LISTENER,
     SOUND = null,
@@ -23,8 +25,56 @@ var SCHEDULE_LIST = [
     new Scheduler4(),
     new Scheduler5(),
     new Scheduler6(),
+    new Scheduler7(),
+    new Scheduler0(),
 ]
 
+var TOTALSEC = 711;
+
+function initProgressBar(){
+    var session = [
+        ['A', 37.5],
+        ['B', 71],
+        ['C', 120],
+        ['D', 158],
+        ['E', 184],
+        ['F', 281],
+        ['G', 323],
+        ['H', 358],
+        ['I', 433],
+        ['J', 463],
+        ['CUE1', 490],
+        ['CUE2', 581],
+        ['CUE3', 600]
+    ]
+    var total = TOTALSEC;
+
+    var marks = $("#progress_marks");
+    marks.html("");
+
+    for (var i = 0; i < session.length; i++) {
+
+        var progress = Math.round(session[i][1] * 1.0 / total * 100);
+
+        if (i == session.length -1) {
+            marks.append(
+                '<div class="bar-step" style="left: ' + progress + '%">' +
+                '<div class="label-percent">' + session[i][0] + '</div>' +
+                '<div class="label-line"></div>'
+            )
+        } else {
+            marks.append(
+                '<div class="bar-step" style="left: ' + progress + '%">' +
+                '<div class="label-txt">' + session[i][0] + '</div>' +
+                '<div class="label-line"></div>'
+            )
+        }
+    }
+
+    var bar = $("#progress_bar");
+    bar.css("width", "0%");
+
+}
 
 function changeInputStart(ele){
     var inputStart = parseFloat($(ele).val());
@@ -41,6 +91,32 @@ function changeInputStart(ele){
     };
 }
 
+function playWithIntro() {
+    WITH_INTRO = true;
+
+    var scheduler = new Scheduler0();
+    var t = new TimelineLite();
+
+    for (var i = 0; i < scheduler.introProgram.length; i++) {
+        var name = scheduler.introProgram[i];
+        var startSecond = scheduler.introStartSecond[i];
+        t = t.call(scheduler[name], [], scheduler, startSecond);
+    }
+
+    $("#intro_text").show();
+
+    render();
+    setTimeout(
+        function(){
+
+            playAudio();
+        },
+        INTRO_TIME * 1000
+    )
+}
+
+
+
 function playAudio(inputStart) {
     if (PAUSE) {
         setTimeout(
@@ -55,7 +131,7 @@ function playAudio(inputStart) {
 
     } else {
 
-        $("#loading_block").html(" Loading... loading... loading... <br> (it might takes up to 30 seconds to load it. Simply wait, or F5 to refresh the webpage.)")
+        $("#loading_block").html("Loading... (it might take long)")
         LISTENER = new THREE.AudioListener();
         CAMERA.add( LISTENER );
         SOUND = new THREE.Audio( LISTENER );
@@ -68,6 +144,8 @@ function playAudio(inputStart) {
             SOUND.setVolume( 2.0 );
             polyAnimate(inputStart);
             $("#loading_block").html("");
+            $("#intro_box").hide();
+            $('#progress_box').show();
         });
 
     }
@@ -76,6 +154,9 @@ function playAudio(inputStart) {
 
 function polyAnimate(inputStart) {
     inputStart = setdefault(inputStart, parseFloat($('#inputStart').val()));
+    if (!parseFloat($('#inputStart').val())) {
+        $('#inputStart').val(inputStart);
+    }
 
     if (TIMELINE) {
         TIMELINE.clear();
@@ -104,6 +185,9 @@ function polyAnimate(inputStart) {
         200
     );
 
+    WITH_INTRO = false;
+    START = null;
+
     render();
 }
 
@@ -117,7 +201,25 @@ function render(timestamp) {
         if (!START) {START = timestamp};
         var progress = ((timestamp - START) / 1000 + inputStart).toFixed(2);
         if (!PAUSE){
-            $('#timestamp').html(progress);
+            if (! WITH_INTRO) {
+                $('#timestamp').html(progress);
+
+                var bar = $("#progress_bar");
+                bar.css("width", (progress * 1.0 / TOTALSEC * 100) + "%");
+
+                $("#time_lapsed").html(
+                    ('0' + Math.floor(progress / 60.0)).slice(-2) + ':' +
+                    ('0' + Math.round(progress) % 60).slice(-2)
+                )
+            } else {
+                var remain_time = INTRO_TIME - Math.round(progress) % 60;
+                if (remain_time < 0){
+                    remain_time = "..."
+                }
+                $("#remain_time").html(
+                    remain_time
+                )
+            }
         }
 
         RENDERER.render(SCENE, CAMERA);
@@ -130,7 +232,7 @@ function render(timestamp) {
         } else {
             $('#timestamp').html("");
             START = null;
-            SOUND.stop();
+            if (SOUND) SOUND.stop();
         }
 
     }
@@ -205,8 +307,7 @@ function init() {
     CONTROLS = new THREE.OrbitControls( CAMERA,  RENDERER.domElement  );
     // // CONTROLS.enableDamping = true;
     // // CONTROLS.dampingFactor = 0.25;
-    // CONTROLS.enableZoom = true;
-
+    CONTROLS.enableZoom = true;
 
 }
 
@@ -253,7 +354,9 @@ function onWindowResize() {
 // });
 
 // $(window).blur(function() {
-//     if (SOUND){
-//         SOUND.pause();
-//     }
+//     pause()
+//     // if (SOUND){
+
+//     //     SOUND.pause();
+//     // }
 // });

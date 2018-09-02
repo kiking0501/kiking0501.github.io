@@ -43,10 +43,12 @@ var Scheduler1 = function(startTime) {
 
     this.musicClockPulse = function () {
 
-        var chords = [['d', 'm', 's', 'd'],
-                      ['l'],
+        var chords = [['l'],
                       ['r', 's'],
-                      ['t', 's']
+                      ['s', 'd'],
+                      ['f'],
+                      ['f', 'l'],
+                      ['d', 'r'],
                      ];
         var musicClock = SCENE.getObjectByName('musicClock');
 
