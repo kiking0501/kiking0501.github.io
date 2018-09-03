@@ -111,7 +111,7 @@ function playWithIntro() {
 
             playAudio();
         },
-        INTRO_TIME * 1000
+        (INTRO_TIME + 3) * 1000
     )
 }
 
