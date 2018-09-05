@@ -61,10 +61,12 @@
                     slides[i].style.display = "none";
               }
               for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                if (i % (dots.length / 2) != slideIndex-1)
+                    dots[i].className = dots[i].className.replace(" active", "");
+                else
+                    dots[i].className += " active";
               }
               slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
             }
 
             function open_music_score(){

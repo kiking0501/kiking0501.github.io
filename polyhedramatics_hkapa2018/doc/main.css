@@ -99,11 +99,11 @@ img {vertical-align: middle;}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
+/*  position: absolute;
   top: 50%;
-  width: auto;
+  width: auto;*/
   padding: 16px;
-  margin-top: -22px;
+  /*margin-top: -22px;*/
   color: #8A8A8A;
   font-weight: bold;
   font-size: 18px;
@@ -113,13 +113,13 @@ img {vertical-align: middle;}
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  /*right: 0;*/
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: grey;
 }
 
 /* Caption text */
