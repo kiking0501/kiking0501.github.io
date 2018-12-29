@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>[ kiking] Gallery of SINoAlice </title>
+
+        <!-- Bootstrap 3-->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="main.css">
+        <script src="../../js/pdfobject.min.js"> </script>
+        <style type="text/css" media="screen">
+
+
+        </style>
+        <script type="text/javascript" charset="utf-8">
+
+        ID = [
+
+          "video-1546094651-Ibarahime",
+          "video-1546094667-Ibarahime",
+          "video-1546094749-Ibarahime",
+
+          "video-1546094725-Alice",
+          "video-1546094657-Alice",
+          "video-1546094687-Alice",
+
+          "video-1546094672-Kaguyahime",
+          "video-1546094662-Kaguyahime",
+          "video-1546094744-Kaguyahime",
+          "video-1546094765-Kaguyahime",
+
+          "video-1546094682-SnowWhite",
+          "video-1546094696-SnowWhite",
+
+          "video-1546094716-Cinderella",
+          "video-1546094759-Cinderella",
+
+          "video-1546094701-Pinocchio",
+          "video-1546094754-Pinocchio",
+
+          "video-1546094730-Akazukin",
+          "video-1546094735-Gretel",
+
+
+          "video-1546094677-Mermaid",
+          "video-1546094711-Mermaid",
+
+          "video-1546094691-A2",
+          "video-1546094739-2B",
+          "video-1546094706",
+
+        ]
+
+            function displayThumbnail(){
+              var container = $("#thumbnails");
+              for (var i = 0; i < ID.length; i++) {
+                var t = $("#thumbnail_template").clone()
+                t.removeAttr("id");
+                t.find("img").attr("src", "../media/" + ID[i] + ".jpg");
+                t.find("img").attr("onclick", "displayVideo('" + ID[i] + ".mp4');");
+                t.show();
+                container.append(t);
+              }
+            }
+
+            function displayVideo(video_id){
+              var container = $("#video_display");
+              var t = $("#video_display_template").clone()
+              t.removeAttr("id");
+              t.find("source").attr("src", "../media/" + video_id);
+              t.show();
+              container.html(t);
+            }
+
+
+            $( document ).ready(function() {
+                displayThumbnail();
+                displayVideo(ID[0] + ".mp4");
+
+            })
+        </script>
+    </head>
+
+    <body>
+
+        <div>
+            <h1 class="title"> [kiking] Gallery of SINoAlice </h1>
+            <h4>
+            第一次發現原來手遊嘅 Graphics 可以咁靚啊
+            </h4>
+
+            <br>
+            <h4>
+             (Last Updated: 2018 Dec 30)
+            </h4>
+        </div>
+
+        <video controls loop autoplay id="video_display_template" style="display:none;" width="100%">
+          <source src="" type="video/mp4">
+        </video>
+
+        <div class="col-xs-2" id="thumbnail_template" style="display:none">
+            <img class="" src="" width="100%" style="cursor:pointer">
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6" id="video_display"> </div>
+          <div class="col-xs-6 row" id="thumbnails"></div>
+        </div>
+
+    </body>
+</html>
