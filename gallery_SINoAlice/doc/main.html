@@ -12,66 +12,42 @@
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" href="main.css">
-        <script src="../../js/pdfobject.min.js"> </script>
         <style type="text/css" media="screen">
 
 
         </style>
         <script type="text/javascript" charset="utf-8">
 
-        ID = [
-
-          "video-1546094651-Ibarahime",
-          "video-1546094667-Ibarahime",
-          "video-1546094749-Ibarahime",
-
-          "video-1546094725-Alice",
-          "video-1546094657-Alice",
-          "video-1546094687-Alice",
-
-          "video-1546094672-Kaguyahime",
-          "video-1546094662-Kaguyahime",
-          "video-1546094744-Kaguyahime",
-          "video-1546094765-Kaguyahime",
-
-          "video-1546094682-SnowWhite",
-          "video-1546094696-SnowWhite",
-
-          "video-1546094716-Cinderella",
-          "video-1546094759-Cinderella",
-
-          'video-1546152394-Pinocchio',
-          "video-1546094701-Pinocchio",
-          "video-1546094754-Pinocchio",
-
-          'video-1546152401-Akazukin',
-          "video-1546094730-Akazukin",
-          'video-1546152417-Gretel',
-          "video-1546094735-Gretel",
-
-
-          'video-1546152411-Mermaid',
-          "video-1546094677-Mermaid",
-          "video-1546094711-Mermaid",
-
-
-          'video-1546152406-9S',
-          "video-1546094691-A2",
-          "video-1546094739-2B",
-          "video-1546094706",
-
+        CHARACTERS = [
+          'Alice',
+          'Kaguyahime',
+          'Dorothy',
+          'Akazukin',
+          'Cinderella',
+          'Gretel',
+          'Ibarahime',
+          'Mermaid',
+          'Pinocchio',
+          'SnowWhite',
+          'NutCracker',
+          'Nier',
         ]
+            function displayThumbnail(tabcontainer, character_name){
+              var container = tabcontainer.find(".row[name='thumbnails_container']");
+              $.get("../media/character_list/" + character_name + ".txt", function(txt){
+                var lines = txt.split("\n");
+                for (var i = 0; i < lines.length; i++) {
+                    if (lines[i]) {
+                      var t = $("#thumbnail_template").clone()
+                      t.removeAttr("id");
+                      t.find("img").attr("src", "../media/" + lines[i] + ".jpg");
+                      t.find("img").attr("onclick", "displayVideo('" + lines[i] + ".mp4');");
+                      t.show();
+                      container.append(t);
+                    }
+                }
+              });
 
-            function displayThumbnail(){
-              var container = $("#thumbnails");
-              for (var i = 0; i < ID.length; i++) {
-                var t = $("#thumbnail_template").clone()
-                t.removeAttr("id");
-                t.find("img").attr("src", "../media/" + ID[i] + ".jpg");
-                t.find("img").attr("onclick", "displayVideo('" + ID[i] + ".mp4');");
-                t.show();
-                container.append(t);
-              }
             }
 
             function displayVideo(video_id){
@@ -84,9 +60,66 @@
             }
 
 
+            function createIcons(){
+              var container = $("#icon_container");
+              for (var i = 0; i < CHARACTERS.length; i++) {
+                var t = $("#icon_template").clone()
+                t.removeAttr("id");
+                t.attr("id", CHARACTERS[i] + "-icon");
+                t.find("img").attr("src", "../media/charactor_icons/" + CHARACTERS[i] + ".jpg");
+                t.find("img").attr("onclick", "openTab('" + CHARACTERS[i] + "');");
+                t.show();
+                container.append(t);
+              }
+            }
+
+            function createTabContent(){
+              var container = $("#tabcontent_container");
+              // Display All
+              var t = $("#tabcontent_template").clone()
+              t.removeAttr("id");
+              t.attr("id", "characters_all");
+              t.css("overflow-y", "auto");
+              t.css("overflow-x", "hidden");
+              t.css("max-height", "1000px");
+              t.show();
+              container.append(t);
+              for (var i = 0; i < CHARACTERS.length; i++){
+                displayThumbnail(t, CHARACTERS[i]);
+              }
+
+              // By Characters
+              for (var i = 0; i < CHARACTERS.length; i++) {
+                var t = $("#tabcontent_template").clone()
+                t.removeAttr("id");
+                t.attr("id", CHARACTERS[i]);
+                t.show();
+                container.append(t);
+                displayThumbnail(t, CHARACTERS[i]);
+              }
+
+
+            }
+
+            function openTab(tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                $("#" + tabName).css("display", "block");
+            }
+
+
             $( document ).ready(function() {
-                displayThumbnail();
-                displayVideo(ID[0] + ".mp4");
+                createIcons();
+                createTabContent();
+                openTab("characters_all");
+                displayVideo("video-1546094651-Ibarahime.mp4")
 
             })
         </script>
@@ -95,28 +128,52 @@
     <body>
 
         <div>
-            <h1 class="title"> [kiking] Gallery of SINoAlice </h1>
+            <h1 class="title" style="color: oldlace"> [kiking] Gallery of SINoAlice </h1>
             <h4>
-            第一次發現原來手遊嘅 Graphics 可以咁靚啊
+              ... 蔡火誼的魔柄特之旅
             </h4>
+            <br>
+            <h4 >
+             Update (2020 Feb 19): 對啊還在玩, 改天會寫個手記吧?
+             <br> <br>
+             Update (2018 Dec 30): 第一次發現原來手遊嘅 Graphics 可以咁靚啊
+             <br>
+            </h4>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6" id="video_display"> </div>
+          <div class="col-xs-6">
+
+
+            <div class="tab">
+              <div class="row" id="icon_container" style="margin: 2px;">
+              </div>
+              <div style="cursor:pointer; float: right; margin-right: 20px; margin-bottom: 10px;" onclick="openTab('characters_all');"> Display All </div>
+            </div>
 
             <br>
-            <h4>
-             (Last Updated: 2018 Dec 30)
-            </h4>
+            <div id="tabcontent_container">
+
+            </div>
+
+          </div>
         </div>
 
         <video controls loop autoplay muted id="video_display_template" style="display:none;" width="100%">
           <source src="" type="video/mp4">
         </video>
 
+        <button class="col-xs-2 tablinks" id="icon_template" style="display:none">
+            <img class="" src="" width="100%" style="cursor:pointer">
+        </button>
+
         <div class="col-xs-2" id="thumbnail_template" style="display:none">
             <img class="" src="" width="100%" style="cursor:pointer">
         </div>
 
-        <div class="row">
-          <div class="col-xs-6" id="video_display"> </div>
-          <div class="col-xs-6 row" id="thumbnails"></div>
+        <div class="tabcontent" id="tabcontent_template" style="display:none">
+          <div class="row" name="thumbnails_container"> </div>
         </div>
 
     </body>
