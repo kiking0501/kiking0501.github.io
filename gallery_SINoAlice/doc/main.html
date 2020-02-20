@@ -19,30 +19,39 @@
         <script type="text/javascript" charset="utf-8">
 
         CHARACTERS = [
-          'Alice',
           'Kaguyahime',
           'Dorothy',
-          'Akazukin',
           'Cinderella',
-          'Gretel',
+          'Alice',
+          'SnowWhite',
           'Ibarahime',
+          'Akazukin',
+          'Gretel',
           'Mermaid',
           'Pinocchio',
-          'SnowWhite',
           'NutCracker',
           'Nier',
         ]
-            function displayThumbnail(tabcontainer, character_name){
+
+        MY_FAVOURITES = [
+
+        ]
+            function createThumbnail(video_id) {
+              var t = $("#thumbnail_template").clone()
+              t.removeAttr("id");
+              t.find("img").attr("src", "../media/" + video_id + ".jpg");
+              t.find("img").attr("onclick", "displayVideo('" + video_id + ".mp4');");
+              t.show();
+              return t;
+            }
+
+            function displayThumbnails(tabcontainer, character_name){
               var container = tabcontainer.find(".row[name='thumbnails_container']");
               $.get("../media/character_list/" + character_name + ".txt", function(txt){
                 var lines = txt.split("\n");
                 for (var i = 0; i < lines.length; i++) {
                     if (lines[i]) {
-                      var t = $("#thumbnail_template").clone()
-                      t.removeAttr("id");
-                      t.find("img").attr("src", "../media/" + lines[i] + ".jpg");
-                      t.find("img").attr("onclick", "displayVideo('" + lines[i] + ".mp4');");
-                      t.show();
+                      var t = createThumbnail(lines[i]);
                       container.append(t);
                     }
                 }
@@ -68,6 +77,7 @@
                 t.attr("id", CHARACTERS[i] + "-icon");
                 t.find("img").attr("src", "../media/charactor_icons/" + CHARACTERS[i] + ".jpg");
                 t.find("img").attr("onclick", "openTab('" + CHARACTERS[i] + "');");
+                t.find("img").attr("title", CHARACTERS[i]);
                 t.show();
                 container.append(t);
               }
@@ -79,14 +89,19 @@
               var t = $("#tabcontent_template").clone()
               t.removeAttr("id");
               t.attr("id", "characters_all");
-              t.css("overflow-y", "auto");
-              t.css("overflow-x", "hidden");
-              t.css("max-height", "1000px");
               t.show();
               container.append(t);
               for (var i = 0; i < CHARACTERS.length; i++){
-                displayThumbnail(t, CHARACTERS[i]);
+                displayThumbnails(t, CHARACTERS[i]);
               }
+
+              // My Favourites
+              var t = $("#tabcontent_template").clone()
+              t.removeAttr("id");
+              t.attr("id", "my_favourites");
+              t.show();
+              container.append(t);
+              displayThumbnails(t, "my_favourites");
 
               // By Characters
               for (var i = 0; i < CHARACTERS.length; i++) {
@@ -95,7 +110,7 @@
                 t.attr("id", CHARACTERS[i]);
                 t.show();
                 container.append(t);
-                displayThumbnail(t, CHARACTERS[i]);
+                displayThumbnails(t, CHARACTERS[i]);
               }
 
 
@@ -119,8 +134,11 @@
                 createIcons();
                 createTabContent();
                 openTab("characters_all");
-                displayVideo("video-1546094651-Ibarahime.mp4")
-
+                $.get("../media/character_list/my_favourites.txt", function(txt){
+                  var lines = txt.split("\n");
+                  var i = Math.floor(Math.random() * lines.length);
+                  displayVideo(lines[i] + ".mp4");
+                });
             })
         </script>
     </head>
@@ -134,7 +152,7 @@
             </h4>
             <br>
             <h4 >
-             Update (2020 Feb 19): 對啊還在玩, 改天會寫個手記吧?
+             Update (2020 Feb 19): [ 有夢想的養生館 > 蒙地卡羅的提靴人 > ] 對啊還在玩, 改天會寫個手記吧?
              <br> <br>
              Update (2018 Dec 30): 第一次發現原來手遊嘅 Graphics 可以咁靚啊
              <br>
@@ -144,11 +162,14 @@
         <div class="row">
           <div class="col-xs-6" id="video_display"> </div>
           <div class="col-xs-6">
-
-
+            <div class="row" style="margin-bottom: 5px;">
+            <a style="margin-left: 20px;" target="_blank" href="https://www.deachsword.ga/db/sinoalice/guildeventranking.php"> 大競技場排名 </a>
+            <a style="margin-left: 20px;" target="_blank" href="https://sinoalice.game-db.tw/weapons"> 武器 </a>
+            </div>
             <div class="tab">
               <div class="row" id="icon_container" style="margin: 2px;">
               </div>
+              <div style="cursor:pointer; float: left; margin-left: 20px; margin-bottom: 10px;" onclick="openTab('my_favourites');"> My Favourites </div>
               <div style="cursor:pointer; float: right; margin-right: 20px; margin-bottom: 10px;" onclick="openTab('characters_all');"> Display All </div>
             </div>
 
@@ -172,7 +193,7 @@
             <img class="" src="" width="100%" style="cursor:pointer">
         </div>
 
-        <div class="tabcontent" id="tabcontent_template" style="display:none">
+        <div class="tabcontent" id="tabcontent_template" style="display:none; overflow-y: auto; overflow-x: hidden; max-height: 1200px;">
           <div class="row" name="thumbnails_container"> </div>
         </div>
 
