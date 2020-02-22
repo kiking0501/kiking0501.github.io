@@ -32,5 +32,5 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 - Created a Gallery page to display my artworks from 2012-2016.
 
-  *2018 Update*:  The thumbnail links have been broken. Maybe they will be fixed somedays!
+  *2020-Update*:  Finally fix the thumbnails.
 
