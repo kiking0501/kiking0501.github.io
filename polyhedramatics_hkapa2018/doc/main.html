@@ -13,7 +13,9 @@
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" href="main.css">
-        <script src="../../js/pdfobject.min.js"> </script>
+        <script src="../../resource/pdfobject.min.js"> </script>
+        <link rel="icon" type="image/png" href="../../resource/favicon.png"/>
+
         <style type="text/css" media="screen">
 
 
@@ -70,6 +72,7 @@
             }
 
             function open_music_score(){
+                toggle_music_score();
                 var w = window.open("", "Music Score by Hippocates CHENG", "width=500px");
 
                 var music_score = $("#music_score").clone();

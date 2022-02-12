@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="resource/favicon.png"/>
     <style type="text/css" media="screen">
 
 
@@ -51,6 +52,17 @@
 
     </style>
     <script type="text/javascript" charset="utf-8">
+        function reloadTrackMe(){
+          $('#trackMeFrame').attr(
+              'src',
+              'https://docs.google.com/spreadsheets/d/e/2PACX-1vTAYpKjD0E_GIqKIX1cdmfpz2ulfApEcOWFYyfW2zLVRImt-MNaX5se-mY78GmIYUhcrv0auJjkDFUQ/pubhtml?gid=743879811&single=true&widget=true&headers=false&timestamp='
+              + Date.now().toString()
+              );
+          console.log(Date.now().toString());
+        }
+        $( document ).ready(function() {
+            reloadTrackMe();
+        })
 
     </script>
 </head>
@@ -61,45 +73,96 @@
         <h1 class="title"> [ kiking ] The Face-table-flip Days </h1>
         <h4>
         ... (╯°□°）╯︵ ┻━┻
-
-
-        <div class="row" style="margin-bottom: 5px; float: right">
-
-            <a href="gallery_SINoAlice/doc/main.html" target="_blank" style="text-decoration: none;">
-                <span style="margin-left: 20px; color: #CC6633";
-                    title="Um... A Mobile Game...">
-                    | Gallery of SINoAlice
-                </span>
-            </a>
-
-            <a data-toggle="modal" data-target="#modelPolyDanceDoc" style="text-decoration: none; cursor: pointer;">
-                <span style="margin-left: 20px;  color: #FFFFCC";
-                    title="Featured in The City Art Exhibition 2018, at The Hong Kong Academy for Performing Arts">
-                    | Polyhedramatics - The Dance
-                </span>
-            </a>
-
-            <a data-toggle="modal" data-target="#modelPolyDance" style="text-decoration: none; cursor: pointer;">
-                <span style="margin-left: 5px; color: #99FFFF";
-                      title="The Developer Angle of the Animation">
-                    (Dev Mode)
-                </span>
-            </a>
-
-            <a href="index_2016gallery.html" target="_blank"
-                style="margin: 20px; text-decoration: none;"
-                title="Last updated: 2016-Jun">| Old Home (Gallery)
-            </a>
-        </div>
-
+              <a data-toggle="modal" data-target="#trackMe" style="text-decoration: none; cursor: pointer;">
+                  <span style="margin-left:20px; color: #80ccff";
+                      oncick=reloadTrackMe(),
+                      title="Track KK!">
+                      <em>| Track Me! </em>
+                  </span>
+              </a>
         </h4>
 
-        <br>
-            <img class="resize center" id="home_banner"
-                src="polyhedramatics_hkapa2018/pic/TheBlueCrystal.gif"
-                alt="the blue crystal">
-            <span style="float: right"> Captured from "Polyhedramatics - The Dance: What Could I Leave for the World?" </span>
-        <br>
+        <div class="row">
+
+          <div class="col-md-2 col-xs-12" style="min-width:310px">
+           <!-- style="margin-bottom: 5px; float: right"> -->
+            <hr>
+            <h4>
+              <a href="https://kiking0501.github.io/Wordle-Solver" target="_blank" style="text-decoration: none;">
+                  <span style="margin-left: 20px; color: #b3ffb3";
+                      title="The Midnight Challenge~">
+                      | Wordle Solver↗
+                  </span>
+              </a>
+            </h4>
+            <h4>
+              <a href="https://kiking0501.github.io/MathDowsers-ARQMath/" target="_blank" style="text-decoration: none;">
+                  <span style="margin-left: 20px; color: #ffcc66";
+                      title="UoWaterloo Master Study">
+                      | MathDowsers@ARQMath↗
+                  </span>
+              </a>
+            </h4>
+            <h4>
+              <a href="gallery_SINoAlice/doc/main.html" target="_blank" style="text-decoration: none;">
+                  <span style="margin-left: 20px; color: #CC6633";
+                      title="Um... A Mobile Game...">
+                      | Gallery of SINoAlice↗
+                  </span>
+              </a>
+            </h4>
+            <h4>
+              <a data-toggle="modal" data-target="#modelPolyDanceDoc" style="text-decoration: none; cursor: pointer;">
+                  <span style="margin-left: 20px;  color: #FFFFCC";
+                      title="Featured in The City Art Exhibition 2018, at The Hong Kong Academy for Performing Arts">
+                      | Polyhedramatics - The Dance🡽
+                  </span>
+              </a>
+            </h4>
+            <h4>
+              <a data-toggle="modal" data-target="#modelPolyDance" style="text-decoration: none; cursor: pointer;">
+                  <span style="margin-left: 20px; color: #99FFFF";
+                        title="The Developer Angle of the Animation">
+                      | -> (Dev Mode)🡽
+                  </span>
+              </a>
+            </h4>
+            <h4>
+              <a href="index_2016gallery.html" target="_blank"
+                  style="margin: 20px; text-decoration: none;"
+                  title="Last updated: 2016-Jun">| Old Home (Gallery)↗
+              </a>
+            </h4>
+          </div>
+
+          <div class="col-md-10 col-xs-12">
+                <div align="center"> Captured from "Polyhedramatics - The Dance: What Could I Leave for the World?" </div>
+                <img class="resize center" id="home_banner"
+                    src="polyhedramatics_hkapa2018/pic/TheBlueCrystal.gif"
+                    alt="the blue crystal">
+          </div>
+
+        </div>
+
+
+        <div class="modal fade" id="trackMe" role="dialog">
+            <div class="modal-dialog modal-md">
+
+              <!-- Modal content-->
+              <div class="modal-content" >
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">Close</button>
+                  <h4></h4>
+                </div>
+                <div class="modal-body" style="overflow:hidden; min-height:500px">
+                  <iframe id="trackMeFrame" height="500" width="100%"></iframe>
+                </div>
+              </div>
+
+            </div>
+        </div>
+
+
 
         <div class="modal fade" id="modelPolyDance" role="dialog">
             <div class="modal-dialog modal-lg">
