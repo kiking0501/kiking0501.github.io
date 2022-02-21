@@ -14,7 +14,7 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 ### 2021-Feb
 
-- Created links in the homepage for my Wordle-Solver and the master studies' resources site MathDowsers@ARQMath.
+- Created links in the homepage for Wordle-Solver, the master studies' resources site MathDowsers@ARQMath, and the machine translation project (Chinese to Cantonese). 
 
 - Created a simple tracker of my daily progress.
 
