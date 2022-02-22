@@ -16,6 +16,8 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 - Created links in the homepage for Wordle-Solver, the master studies' resources site MathDowsers@ARQMath, and the machine translation project (Chinese to Cantonese). 
 
+- Added back the link to Shining Beauty of Mathematics
+
 - Created a simple tracker of my daily progress.
 
   
