@@ -13,7 +13,10 @@ Gradually, this site has become a personalized space to showcase works that are 
 ## Changes
 ### 2024-Jul
 
+- Created a page to display my reading notes
+
 - Provided links to my public social media accounts 
+
 - Removed the "my daily progress" tracker (which has been abandoned after the master studies!) 
 
 

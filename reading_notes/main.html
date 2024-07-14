@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>[ kiking] My Reading Notes </title>
+            <meta property = "og:image"
+                content="https://github.com/kiking0501/kiking0501.github.io/blob/master/polyhedramatics_hkapa2018/pic/TheBlueCrystal.png" />
+        <!-- Bootstrap 3-->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="main.css">
+        <script src="../../resource/pdfobject.min.js"> </script>
+        <link rel="icon" type="image/png" href="../../resource/favicon.png"/>
+
+        <style type="text/css" media="screen">
+
+
+        </style>
+        <script type="text/javascript" charset="utf-8">
+
+            function open_music_score(){
+                toggle_music_score();
+                var w = window.open("", "Music Score by Hippocates CHENG", "width=500px");
+
+                var music_score = $("#music_score").clone();
+                w.document.write(music_score.html());
+                w.document.title = "Music Score";
+            }
+
+            function toggle_notes_pdf(){
+
+                var options = {
+                    pdfOpenParams: {
+                        view: 'FitV',
+                        pagemode: 'thumbs',
+                        search: 'lorem ipsum'
+                    }
+                };
+
+                PDFObject.embed(
+                    "[Hippocrates_Cheng_Ching-nam)_What_could_I_leave_for_the_world__for_orchestra.pdf",
+                    "#music_score",
+                    options
+                )
+                $("#button_toggle_notes_pdf").hide();
+            }
+            var pdf_options = {
+                pdfOpenParams: {
+                    view: 'FitV',
+                    pagemode: 'thumbs',
+                    search: 'lorem ipsum'
+                }
+            };
+
+            var titles = [
+                "01_concepts_of_modern_mathematics_ian_stewart",
+                "02_introduction_to_topology_bert_mendelson",
+                "03_introduction_to_real_analysis_robert_g_bartle",
+            ]
+
+            function display_book_covers() {
+                var section_book_covers = $("#section_book_cover")
+                section_book_covers.html("");
+                for (let i = 0; i < titles.length; i++) {
+                    var book_cover = $("#template_book_cover").clone();
+                    book_cover.find(".book_cover").attr("id", "cover_" + titles[i]);
+
+                    var img = book_cover.find("img");
+                    img.attr("src","./thumbnails/cover_" + titles[i] + ".jpg");
+                    img.attr("onclick", "load_book('" + titles[i] + "');");
+                    img.attr("title", $("#description_" + titles[i]).text());
+                    section_book_covers.append(book_cover.html());
+                }
+            }
+
+            function load_book(title) {
+                $(".book_description").hide();
+                $(".book_cover").css("background-color", "inherit");
+
+                $("#description_" + title).show();
+                $("#cover_" + title).css("background-color", "black");
+                PDFObject.embed(
+                    "./notes_pdf/kiking_notes_" + title + ".pdf",
+                    "#notes_pdf",
+                    pdf_options
+                );
+            }
+
+            $( document ).ready(function() {
+                display_book_covers();
+                load_book(titles[0]);
+            })
+        </script>
+    </head>
+
+    <body>
+
+        <div>
+            <h1 class="title"><a href="../" style="text-decoration: none; color:inherit">[ kiking ]</a> My Reading Notes</h1>
+            <h4></h4>
+
+            <div class="row">
+                <div class="col-lg-4" >
+                    <hr>
+                     <span style="font-size:18px">
+                     A collection of books that I have read. Click to checkout my notes - enjoy!
+                    </span>
+
+                    <br> <br>
+                    
+                    <div class="row" id="section_book_cover">
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8" id="section_reading_notes">
+                    <hr>
+                     <span class="book_description" id="description_01_concepts_of_modern_mathematics_ian_stewart" style="font-size:18px; display:none;">
+                    [[ Concepts of Modern Mathematics ]], Ian Stewart <br>
+                    <i>Last update: 2024-03-12</i>
+                    </span>
+                    <span class="book_description" id="description_02_introduction_to_topology_bert_mendelson" style="font-size:18px; display:none;">
+                    [[ Introduction to Topology ]], Bert Mendelson <br>
+                    <i>Last update: 2024-07-02</i>
+                    </span>
+                    <span class="book_description" id="description_03_introduction_to_real_analysis_robert_g_bartle" style="font-size:18px; display:none;">
+                    [[ Introduction to Real Analaysis ]], Robert G Bartle <br>
+                    <i>Last update: 2024-07-07</i>
+                    </span>
+
+                    <br> <br>
+
+                    <div id="notes_pdf"> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="template_book_cover" class="col-xs-4" style="display:none">
+            <div class="col-xs-4 book_cover">
+                 <img src="" onclick="" title="" style="cursor:pointer; padding:10px" width="100%">
+            </div>
+        </div>
+    </body>
+</html>
