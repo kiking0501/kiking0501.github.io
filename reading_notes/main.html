@@ -49,7 +49,7 @@
 
                     var img = book_cover.find("img");
                     img.attr("src","./thumbnails/cover_" + titles[i] + ".jpg");
-                    img.attr("onclick", "load_book('" + titles[i] + '", "' + glinks[i] +'");');
+                    img.attr("onclick", "load_book('" + titles[i] + "', '" + glinks[i] +"');");
                     img.attr("title", $("#description_" + titles[i]).text());
                     section_book_covers.append(book_cover.html());
                 }
