@@ -21,33 +21,6 @@
 
         </style>
         <script type="text/javascript" charset="utf-8">
-
-            function open_music_score(){
-                toggle_music_score();
-                var w = window.open("", "Music Score by Hippocates CHENG", "width=500px");
-
-                var music_score = $("#music_score").clone();
-                w.document.write(music_score.html());
-                w.document.title = "Music Score";
-            }
-
-            function toggle_notes_pdf(){
-
-                var options = {
-                    pdfOpenParams: {
-                        view: 'FitV',
-                        pagemode: 'thumbs',
-                        search: 'lorem ipsum'
-                    }
-                };
-
-                PDFObject.embed(
-                    "[Hippocrates_Cheng_Ching-nam)_What_could_I_leave_for_the_world__for_orchestra.pdf",
-                    "#music_score",
-                    options
-                )
-                $("#button_toggle_notes_pdf").hide();
-            }
             var pdf_options = {
                 pdfOpenParams: {
                     view: 'FitV',
@@ -61,6 +34,11 @@
                 "02_introduction_to_topology_bert_mendelson",
                 "03_introduction_to_real_analysis_robert_g_bartle",
             ]
+            var glinks = [
+                "https://drive.google.com/file/d/1WCB5_tCf4fl7Y0iIs5sL2RjXL4165bJd/preview?usp=drive_link", // 01
+                "https://drive.google.com/file/d/16mRWyKYC-xZRcowjPSk1wH7H7ScRVk3U/preview?usp=drive_link", // 02
+                "https://drive.google.com/file/d/1jKNWG-AtRwDFjtXzRWnICI5BWOBMoeVt/preview?usp=drive_link", // 03
+            ]
 
             function display_book_covers() {
                 var section_book_covers = $("#section_book_cover")
@@ -71,28 +49,31 @@
 
                     var img = book_cover.find("img");
                     img.attr("src","./thumbnails/cover_" + titles[i] + ".jpg");
-                    img.attr("onclick", "load_book('" + titles[i] + "');");
+                    img.attr("onclick", "load_book('" + titles[i] + '", "' + glinks[i] +'");');
                     img.attr("title", $("#description_" + titles[i]).text());
                     section_book_covers.append(book_cover.html());
                 }
             }
 
-            function load_book(title) {
+            function load_book(title, glink) {
                 $(".book_description").hide();
                 $(".book_cover").css("background-color", "inherit");
 
                 $("#description_" + title).show();
                 $("#cover_" + title).css("background-color", "black");
+                var fallbackLink = {
+                    'fallbackLink': '<embed src="' + glinks + '" width="100%"/> '
+                };
                 PDFObject.embed(
                     "./notes_pdf/kiking_notes_" + title + ".pdf",
                     "#notes_pdf",
-                    pdf_options
+                    Object.assign({}, pdf_options, fallbackLink)
                 );
             }
 
             $( document ).ready(function() {
                 display_book_covers();
-                load_book(titles[0]);
+                load_book(titles[0], glinks[0]);
             })
         </script>
     </head>
