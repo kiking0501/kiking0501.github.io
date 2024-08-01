@@ -34,25 +34,35 @@
                 "02_introduction_to_topology_bert_mendelson",
                 "03_introduction_to_real_analysis_robert_g_bartle",
                 "04_introduction_to_machine_learning_yaoliang_yu",
-            ].reverse();
+                "05_introduction_to_graph_theory_richard_j_trudeau",
+            ];
             var glinks = [
                 "https://drive.google.com/file/d/1WCB5_tCf4fl7Y0iIs5sL2RjXL4165bJd/preview?usp=drive_link", // 01
                 "https://drive.google.com/file/d/16mRWyKYC-xZRcowjPSk1wH7H7ScRVk3U/preview?usp=drive_link", // 02
                 "https://drive.google.com/file/d/1jKNWG-AtRwDFjtXzRWnICI5BWOBMoeVt/preview?usp=drive_link", // 03
                 "https://drive.google.com/file/d/15RsdIuZ_lymL46aXJj4OleJrG-QpH4eN/preview?usp=drive_link", // 04
-            ].reverse();
+                "https://drive.google.com/file/d/1mfRiKuEZeG7Xftn808Zi4HvDY6z0iPuQ/preview?usp=drive_link", //05
+            ];
+            var order = [
+                4,
+                3,
+                2,
+                5,
+                1,
+            ]
 
             function display_book_covers() {
                 var section_book_covers = $("#section_book_cover")
                 section_book_covers.html("");
-                for (let i = 0; i < titles.length; i++) {
+                for (let i = 0; i < order.length; i++) {
+                    var pos = order[i] - 1;
                     var book_cover = $("#template_book_cover").clone();
-                    book_cover.find(".book_cover").attr("id", "cover_" + titles[i]);
+                    book_cover.find(".book_cover").attr("id", "cover_" + titles[pos]);
 
                     var img = book_cover.find("img");
-                    img.attr("src","./thumbnails/cover_" + titles[i] + ".jpg");
-                    img.attr("onclick", "load_book('" + titles[i] + "', '" + glinks[i] +"');");
-                    img.attr("title", $("#description_" + titles[i]).text());
+                    img.attr("src","./thumbnails/cover_" + titles[pos] + ".jpg");
+                    img.attr("onclick", "load_book('" + titles[pos] + "', '" + glinks[pos] +"');");
+                    img.attr("title", $("#description_" + titles[pos]).text());
                     section_book_covers.append(book_cover.html());
                 }
             }
@@ -75,7 +85,8 @@
 
             $( document ).ready(function() {
                 display_book_covers();
-                load_book(titles[0], glinks[0]);
+                var init_pos = order[0] - 1;
+                load_book(titles[init_pos], glinks[init_pos]);
             })
         </script>
     </head>
@@ -118,6 +129,10 @@
                     [[ Introduction to Machine Learning ]], Yaoliang Yu <span style="color:grey">(yyds)</span> <br> 
                     <a href="https://cs.uwaterloo.ca/~y328yu/mycourses/480/lecture.html">Course Homepage from University of Waterloo</a><br>
                     <i>Last update: 2024-07-29</i>
+                    </span>
+                    <span class="book_description" id="description_05_introduction_to_graph_theory_richard_j_trudeau" style="font-size:18px; display:none;">
+                    [[ Introduction to Graph Theory ]], Richard J. Trudeau <br>
+                    <i>Last update: 2024-08-01</i>
                     </span>
                     
                     <br> <br>
