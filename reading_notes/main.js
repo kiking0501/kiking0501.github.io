@@ -33,7 +33,7 @@ function display_graph() {
         const material = new THREE.SpriteMaterial({ map: imgTexture });
         const sprite = new THREE.Sprite(material);
 
-        var discountFactor = 0.5
+        var discountFactor = 1
         sprite.scale.set(
             imgElement.width / discountFactor,
             imgElement.height * (imgElement.width / imgElement.naturalWidth) / discountFactor
@@ -41,11 +41,11 @@ function display_graph() {
         return sprite;
     }
 
-    function getTextSprite(title, color) {
+    function getTextSprite(title, color, level) {
         const sprite = new SpriteText(title);
         sprite.material.depthWrite = false; // make sprite background transparent
         sprite.color = color;
-        sprite.textHeight = 15;
+        sprite.textHeight = 10 - level*2;
         sprite.strokeColor = 'black';
         sprite.strokeWidth = 3;
 
@@ -62,7 +62,7 @@ function display_graph() {
       .backgroundColor('black')
       .showNavInfo(true)
       .jsonUrl(graph_file)
-      .dagMode('zin')  //    .zoomToFit(20, 100, node => true)
+      .dagMode('lr') 
       .linkColor((link) => {
         if (link.type == "contains") { return reading_info[link.source[0]]['color'] };
         if (link.type == "related") { return 'red'}
@@ -80,7 +80,9 @@ function display_graph() {
             return getImgSprite(node.book_key);
         }
         if (node.type == "text") {
-            return getTextSprite(node.title, reading_info[node.book_key]['color']);
+            return getTextSprite(
+                node.title, reading_info[node.book_key]['color'], node.bookmark_level
+            );
         }
       })
       .onNodeClick((node) => {
@@ -96,8 +98,9 @@ function display_graph() {
         //     highlightLinks.add(link);
         //     Graph.linkWidth(Graph.linkWidth());
         // }
-      });
-      Graph.d3Force('charge').strength(-300);
+      })
+      .zoomToFit(0, 500, node => true);
+      Graph.d3Force('charge').strength(-100);
 }
 
 

@@ -4,6 +4,13 @@ import os
 import re
 
 def dump_json(args):
+    """
+        Generate the graph json file in the form of
+        {
+            "nodes": [...],
+            "edges: [...]
+        }
+    """
     def get_book_keys(bookmark_suffix):
         book_keys = []
         for file in glob(f"../bookmarks/*{bookmark_suffix}"):
@@ -30,10 +37,12 @@ def dump_json(args):
 
 
 def get_custom_graph(custom_graph_file):
+    """ Load custom graph info from file """
     return json.load(open(custom_graph_file, "r"))
 
 
 def get_core_graph(book_keys, dump_json=False):
+    """ Get the core graph of "Book" nodes """
     graph = {
         "nodes": [
             {
@@ -54,6 +63,11 @@ def get_core_graph(book_keys, dump_json=False):
 
 
 def get_bookmark_graph(book_keys, dump_json=False):
+    """
+        Get the bookmark subgraphs corresponding to each "Book",
+            where "Book" nodes are the roots,
+            and each bookmark section contributes to a child node of these roots
+    """
 
     def get_path_bookmark(book_key):
         return f"../bookmarks/{book_key}_bookmark.txt"
@@ -68,28 +82,36 @@ def get_bookmark_graph(book_keys, dump_json=False):
         return bookmark_title.partition(':')[2].strip()
 
     def get_graph_bookmark(bookmark_info):
-        nodes = [
-            {
-                "id": bookmark_id,
-                "bookmark_name": info['title'],
-                "bookmark_page": info["page"],
-                "title": get_keyword_bookmark(info['title']),
-                "book_key": book_key,
-                "type": "text",
-            }
-            for book_key, bookmark_id, info in bookmark_info
-            if bookmark_id is not None and info['level'] == 1
-        ]
-        links = [
-            {
-                "source": book_key,
-                "target": bookmark_id,
-                "type": "contains",
+        nodes, links = [], []
 
-            }
-            for book_key, bookmark_id, info in bookmark_info
-            if bookmark_id is not None and info['level'] == 1
-        ]
+        parent_ids = {}  
+        for book_key, bookmark_id, info in bookmark_info:
+            if bookmark_id is None: continue
+            nodes.append(
+                {
+                    "id": bookmark_id,
+                    "bookmark_name": info['title'],
+                    "bookmark_page": info["page"],
+                    "bookmark_level": info['level'],
+                    "title": get_keyword_bookmark(info['title']),
+                    "book_key": book_key,
+                    "type": "text",
+                }
+            )
+            parent_ids[info['level']] = bookmark_id
+
+            if info['level'] == 1 or not (parent_ids.get(info['level']-1)):
+                parent_bookmark_id = book_key
+            else:
+                parent_bookmark_id = parent_ids[info['level']-1]
+            links.append(
+                {
+                    "source": parent_bookmark_id,
+                    "target": bookmark_id,
+                    "type": "contains",
+
+                }
+            )
         return {"nodes": nodes, "links": links}
 
 
@@ -132,7 +154,11 @@ def read_bookmark_info(filename):
         
         Output:
         [
-            {'title': 'Chapter 1: General', 'level': 1, 'page': 1},
+            {
+                'title' (str): 'Chapter 1: General', 
+                'level' (int): 1, 
+                'page'  (int): 1
+            },
             ...
         ]
     '''
