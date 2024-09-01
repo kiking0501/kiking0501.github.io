@@ -6,18 +6,13 @@
             "type": "img"
         },
         {
+            "id": "6",
+            "book_key": "6",
+            "type": "img"
+        },
+        {
             "id": "2",
             "book_key": "2",
-            "type": "img"
-        },
-        {
-            "id": "3",
-            "book_key": "3",
-            "type": "img"
-        },
-        {
-            "id": "4",
-            "book_key": "4",
             "type": "img"
         },
         {
@@ -26,8 +21,13 @@
             "type": "img"
         },
         {
-            "id": "6",
-            "book_key": "6",
+            "id": "4",
+            "book_key": "4",
+            "type": "img"
+        },
+        {
+            "id": "3",
+            "book_key": "3",
             "type": "img"
         },
         {
@@ -191,6 +191,46 @@
             "type": "text"
         },
         {
+            "id": "6-1",
+            "bookmark_name": "Chapter 1: Introduction",
+            "bookmark_page": 1,
+            "title": "Introduction",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
+            "id": "6-2",
+            "bookmark_name": "Chapter 2: Linear Algebra",
+            "bookmark_page": 2,
+            "title": "Linear Algebra",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
+            "id": "6-3",
+            "bookmark_name": "Chapter 3: Probability and Information Theory",
+            "bookmark_page": 7,
+            "title": "Probability and Information Theory",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
+            "id": "6-4",
+            "bookmark_name": "Chapter 4: Numerical Computation",
+            "bookmark_page": 15,
+            "title": "Numerical Computation",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
+            "id": "6-5",
+            "bookmark_name": "Chapter 5: Machine Learning Basics",
+            "bookmark_page": 19,
+            "title": "Machine Learning Basics",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
             "id": "2-1",
             "bookmark_name": "Chapter 1: Theory of Sets",
             "bookmark_page": 1,
@@ -231,91 +271,67 @@
             "type": "text"
         },
         {
-            "id": "3-1",
-            "bookmark_name": "Chapter 1: Preliminaries",
+            "id": "5-1",
+            "bookmark_name": "Chapter 1: Pure Mathematics",
             "bookmark_page": 1,
-            "title": "Preliminaries",
-            "book_key": "3",
+            "title": "Pure Mathematics",
+            "book_key": "5",
             "type": "text"
         },
         {
-            "id": "3-2",
-            "bookmark_name": "Chapter 2: The Real Numbers",
+            "id": "5-2",
+            "bookmark_name": "Chapter 2: Graphs",
             "bookmark_page": 1,
-            "title": "The Real Numbers",
-            "book_key": "3",
+            "title": "Graphs",
+            "book_key": "5",
             "type": "text"
         },
         {
-            "id": "3-3",
-            "bookmark_name": "Chapter 3: Sequence and Series",
+            "id": "5-3",
+            "bookmark_name": "Chapter 3: Planar Graphs",
             "bookmark_page": 2,
-            "title": "Sequence and Series",
-            "book_key": "3",
+            "title": "Planar Graphs",
+            "book_key": "5",
             "type": "text"
         },
         {
-            "id": "3-4",
-            "bookmark_name": "Chapter 4: Limits",
-            "bookmark_page": 3,
-            "title": "Limits",
-            "book_key": "3",
-            "type": "text"
-        },
-        {
-            "id": "3-5",
-            "bookmark_name": "Chapter 5: Continuous Functions",
-            "bookmark_page": 3,
-            "title": "Continuous Functions",
-            "book_key": "3",
-            "type": "text"
-        },
-        {
-            "id": "3-6",
-            "bookmark_name": "Chapter 6: Differentiation",
+            "id": "5-4",
+            "bookmark_name": "Chapter 4: Euler's Formula",
             "bookmark_page": 4,
-            "title": "Differentiation",
-            "book_key": "3",
+            "title": "Euler's Formula",
+            "book_key": "5",
             "type": "text"
         },
         {
-            "id": "3-7",
-            "bookmark_name": "Chapter 7: Riemann Integral",
+            "id": "5-5",
+            "bookmark_name": "Chapter 5: Platonic Graphs",
             "bookmark_page": 6,
-            "title": "Riemann Integral",
-            "book_key": "3",
+            "title": "Platonic Graphs",
+            "book_key": "5",
             "type": "text"
         },
         {
-            "id": "3-8",
-            "bookmark_name": "Chapter 8: Sequences of Functions",
+            "id": "5-6",
+            "bookmark_name": "Chapter 6: Coloring",
             "bookmark_page": 8,
-            "title": "Sequences of Functions",
-            "book_key": "3",
+            "title": "Coloring",
+            "book_key": "5",
             "type": "text"
         },
         {
-            "id": "3-9",
-            "bookmark_name": "Chapter 9: Infinite Series",
-            "bookmark_page": 10,
-            "title": "Infinite Series",
-            "book_key": "3",
+            "id": "5-7",
+            "bookmark_name": "Chapter 7: The Genus of a Graph",
+            "bookmark_page": 8,
+            "title": "The Genus of a Graph",
+            "book_key": "5",
             "type": "text"
         },
         {
-            "id": "3-10",
-            "bookmark_name": "Chapter 10: The Generalized Riemann Integral",
-            "bookmark_page": 13,
-            "title": "The Generalized Riemann Integral",
-            "book_key": "3",
-            "type": "text"
-        },
-        {
-            "id": "3-11",
-            "bookmark_name": "Chapter 11: A Glimpse into Topology",
-            "bookmark_page": 15,
-            "title": "A Glimpse into Topology",
-            "book_key": "3",
+            "id": "5-8",
+            "bookmark_name": "Chapter 8: Euler Walks and Hamilton Walks",
+            "bookmark_page": 12,
+            "title": "Euler Walks and Hamilton Walks",
+            "book_key": "5",
             "type": "text"
         },
         {
@@ -415,107 +431,91 @@
             "type": "text"
         },
         {
-            "id": "5-1",
-            "bookmark_name": "Chapter 1: Pure Mathematics",
+            "id": "3-1",
+            "bookmark_name": "Chapter 1: Preliminaries",
             "bookmark_page": 1,
-            "title": "Pure Mathematics",
-            "book_key": "5",
+            "title": "Preliminaries",
+            "book_key": "3",
             "type": "text"
         },
         {
-            "id": "5-2",
-            "bookmark_name": "Chapter 2: Graphs",
+            "id": "3-2",
+            "bookmark_name": "Chapter 2: The Real Numbers",
             "bookmark_page": 1,
-            "title": "Graphs",
-            "book_key": "5",
+            "title": "The Real Numbers",
+            "book_key": "3",
             "type": "text"
         },
         {
-            "id": "5-3",
-            "bookmark_name": "Chapter 3: Planar Graphs",
+            "id": "3-3",
+            "bookmark_name": "Chapter 3: Sequence and Series",
             "bookmark_page": 2,
-            "title": "Planar Graphs",
-            "book_key": "5",
+            "title": "Sequence and Series",
+            "book_key": "3",
             "type": "text"
         },
         {
-            "id": "5-4",
-            "bookmark_name": "Chapter 4: Euler's Formula",
+            "id": "3-4",
+            "bookmark_name": "Chapter 4: Limits",
+            "bookmark_page": 3,
+            "title": "Limits",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-5",
+            "bookmark_name": "Chapter 5: Continuous Functions",
+            "bookmark_page": 3,
+            "title": "Continuous Functions",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-6",
+            "bookmark_name": "Chapter 6: Differentiation",
             "bookmark_page": 4,
-            "title": "Euler's Formula",
-            "book_key": "5",
+            "title": "Differentiation",
+            "book_key": "3",
             "type": "text"
         },
         {
-            "id": "5-5",
-            "bookmark_name": "Chapter 5: Platonic Graphs",
+            "id": "3-7",
+            "bookmark_name": "Chapter 7: Riemann Integral",
             "bookmark_page": 6,
-            "title": "Platonic Graphs",
-            "book_key": "5",
+            "title": "Riemann Integral",
+            "book_key": "3",
             "type": "text"
         },
         {
-            "id": "5-6",
-            "bookmark_name": "Chapter 6: Coloring",
+            "id": "3-8",
+            "bookmark_name": "Chapter 8: Sequences of Functions",
             "bookmark_page": 8,
-            "title": "Coloring",
-            "book_key": "5",
+            "title": "Sequences of Functions",
+            "book_key": "3",
             "type": "text"
         },
         {
-            "id": "5-7",
-            "bookmark_name": "Chapter 7: The Genus of a Graph",
-            "bookmark_page": 8,
-            "title": "The Genus of a Graph",
-            "book_key": "5",
+            "id": "3-9",
+            "bookmark_name": "Chapter 9: Infinite Series",
+            "bookmark_page": 10,
+            "title": "Infinite Series",
+            "book_key": "3",
             "type": "text"
         },
         {
-            "id": "5-8",
-            "bookmark_name": "Chapter 8: Euler Walks and Hamilton Walks",
-            "bookmark_page": 12,
-            "title": "Euler Walks and Hamilton Walks",
-            "book_key": "5",
+            "id": "3-10",
+            "bookmark_name": "Chapter 10: The Generalized Riemann Integral",
+            "bookmark_page": 13,
+            "title": "The Generalized Riemann Integral",
+            "book_key": "3",
             "type": "text"
         },
         {
-            "id": "6-1",
-            "bookmark_name": "Chapter 1: Introduction",
-            "bookmark_page": 1,
-            "title": "Introduction",
-            "book_key": "6",
-            "type": "text"
-        },
-        {
-            "id": "6-2",
-            "bookmark_name": "Chapter 2: Linear Algebra",
-            "bookmark_page": 2,
-            "title": "Linear Algebra",
-            "book_key": "6",
-            "type": "text"
-        },
-        {
-            "id": "6-3",
-            "bookmark_name": "Chapter 3: Probability and Information Theory",
-            "bookmark_page": 7,
-            "title": "Probability and Information Theory",
-            "book_key": "6",
-            "type": "text"
-        },
-        {
-            "id": "6-4",
-            "bookmark_name": "Chapter 4: Numerical Computation",
+            "id": "3-11",
+            "bookmark_name": "Chapter 11: A Glimpse into Topology",
             "bookmark_page": 15,
-            "title": "Numerical Computation",
-            "book_key": "6",
-            "type": "text"
-        },
-        {
-            "id": "6-5",
-            "bookmark_name": "Chapter 5: Machine Learning Basics",
-            "bookmark_page": 19,
-            "title": "Machine Learning Basics",
-            "book_key": "6",
+            "title": "A Glimpse into Topology",
+            "book_key": "3",
             "type": "text"
         }
     ],
@@ -621,6 +621,31 @@
             "type": "contains"
         },
         {
+            "source": "6",
+            "target": "6-1",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-2",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-3",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-4",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-5",
+            "type": "contains"
+        },
+        {
             "source": "2",
             "target": "2-1",
             "type": "contains"
@@ -646,58 +671,43 @@
             "type": "contains"
         },
         {
-            "source": "3",
-            "target": "3-1",
+            "source": "5",
+            "target": "5-1",
             "type": "contains"
         },
         {
-            "source": "3",
-            "target": "3-2",
+            "source": "5",
+            "target": "5-2",
             "type": "contains"
         },
         {
-            "source": "3",
-            "target": "3-3",
+            "source": "5",
+            "target": "5-3",
             "type": "contains"
         },
         {
-            "source": "3",
-            "target": "3-4",
+            "source": "5",
+            "target": "5-4",
             "type": "contains"
         },
         {
-            "source": "3",
-            "target": "3-5",
+            "source": "5",
+            "target": "5-5",
             "type": "contains"
         },
         {
-            "source": "3",
-            "target": "3-6",
+            "source": "5",
+            "target": "5-6",
             "type": "contains"
         },
         {
-            "source": "3",
-            "target": "3-7",
+            "source": "5",
+            "target": "5-7",
             "type": "contains"
         },
         {
-            "source": "3",
-            "target": "3-8",
-            "type": "contains"
-        },
-        {
-            "source": "3",
-            "target": "3-9",
-            "type": "contains"
-        },
-        {
-            "source": "3",
-            "target": "3-10",
-            "type": "contains"
-        },
-        {
-            "source": "3",
-            "target": "3-11",
+            "source": "5",
+            "target": "5-8",
             "type": "contains"
         },
         {
@@ -761,68 +771,58 @@
             "type": "contains"
         },
         {
-            "source": "5",
-            "target": "5-1",
+            "source": "3",
+            "target": "3-1",
             "type": "contains"
         },
         {
-            "source": "5",
-            "target": "5-2",
+            "source": "3",
+            "target": "3-2",
             "type": "contains"
         },
         {
-            "source": "5",
-            "target": "5-3",
+            "source": "3",
+            "target": "3-3",
             "type": "contains"
         },
         {
-            "source": "5",
-            "target": "5-4",
+            "source": "3",
+            "target": "3-4",
             "type": "contains"
         },
         {
-            "source": "5",
-            "target": "5-5",
+            "source": "3",
+            "target": "3-5",
             "type": "contains"
         },
         {
-            "source": "5",
-            "target": "5-6",
+            "source": "3",
+            "target": "3-6",
             "type": "contains"
         },
         {
-            "source": "5",
-            "target": "5-7",
+            "source": "3",
+            "target": "3-7",
             "type": "contains"
         },
         {
-            "source": "5",
-            "target": "5-8",
+            "source": "3",
+            "target": "3-8",
             "type": "contains"
         },
         {
-            "source": "6",
-            "target": "6-1",
+            "source": "3",
+            "target": "3-9",
             "type": "contains"
         },
         {
-            "source": "6",
-            "target": "6-2",
+            "source": "3",
+            "target": "3-10",
             "type": "contains"
         },
         {
-            "source": "6",
-            "target": "6-3",
-            "type": "contains"
-        },
-        {
-            "source": "6",
-            "target": "6-4",
-            "type": "contains"
-        },
-        {
-            "source": "6",
-            "target": "6-5",
+            "source": "3",
+            "target": "3-11",
             "type": "contains"
         },
         {

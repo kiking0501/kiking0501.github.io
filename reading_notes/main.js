@@ -52,6 +52,8 @@ function display_graph() {
         return sprite;
     }
 
+
+    const graph_file = './graph/complete_graph.json'
     var highlightLinks = new Set();
 
     const Graph = ForceGraph3D({ controlType: 'orbit' })(document.getElementById('section_graph'))
@@ -59,7 +61,7 @@ function display_graph() {
       .height(1200)
       .backgroundColor('black')
       .showNavInfo(true)
-      .jsonUrl('./graph/complete_graph.json')
+      .jsonUrl(graph_file)
       .dagMode('zin')  //    .zoomToFit(20, 100, node => true)
       .linkColor((link) => {
         if (link.type == "contains") { return reading_info[link.source[0]]['color'] };
