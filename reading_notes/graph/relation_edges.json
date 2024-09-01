@@ -1,0 +1,121 @@
+{
+    "links": [
+        {
+            "source": "1-10",
+            "target": "2-3",
+            "type": "related",
+            "remark": "Overview/Topology -> Topology/Topological Spaces"
+        },
+        {
+            "source": "1-11",
+            "target": "5-4",
+            "type": "related",
+            "remark": "Overview/Network -> Graph Theory/Euler's Formula"
+        },
+        {
+            "source": "1-11",
+            "target": "5-6",
+            "type": "related",
+            "remark": "Overview/Network -> Graph Theory/Coloring"
+        },
+        {
+            "source": "1-12",
+            "target": "5-7",
+            "type": "related",
+            "remark": "Overview/Topological Invariants -> Graph Theory/Genus"
+        },
+        {
+            "source": "1-13",
+            "target": "2-4",
+            "type": "related",
+            "remark": "Overview/Algebraic Topology -> Topology/Connectedness"
+        },
+        {
+            "source": "1-14",
+            "target": "5-7",
+            "type": "related",
+            "remark": "Overview/Hyperspace ->  Graph Theory/Genus"
+        },
+        {
+            "source": "1-15",
+            "target": "6-2",
+            "type": "related",
+            "remark": "Overview/Linear Algebra ->  DL/Linear Algebra"
+        },
+        {
+            "source": "1-16",
+            "target": "3-3",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Real Analysis/Sequence and Series"
+        },
+        {
+            "source": "1-16",
+            "target": "3-4",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Real Analysis/Limits"
+        },
+        {
+            "source": "1-16",
+            "target": "3-9",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Real Analysis/Infinite Series"
+        },
+        {
+            "source": "3-10",
+            "target": "6-3",
+            "type": "related",
+            "remark": "Real Analysis/The Generalized Riemann Integral -> DL/Probability & Information Theory"
+        },
+        {
+            "source": "3-11",
+            "target": "2-2",
+            "type": "related",
+            "remark": "Real Analysis/Glipse of Topology ->  Topology/Theory of Metric Spaces"
+        },
+        {
+            "source": "3-11",
+            "target": "2-5",
+            "type": "related",
+            "remark": "Real Analysis/Glipse of Topology ->  Topology/Compactness"
+        },
+        {
+            "source": "4-02",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/Linear Regression ->  DL/ML Basics"
+        },
+        {
+            "source": "4-03",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/Logistic Regression ->  DL/ML Basics"
+        },
+        {
+            "source": "4-04",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/SVM ->  DL/ML Basics"
+        },
+        {
+            "source": "4-06",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/Reproducing Kernels ->  DL/ ML Basics"
+        },
+        {
+            "source": "4-08",
+            "target": "6-4",
+            "type": "related",
+            "remark": "ML/Multi-layer Perceptron ->  DL/ Numerical Computation"
+        },
+        
+        {
+            "source": "4-13",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/Decision Trees ->  DL/ML Basics"
+        }
+
+        
+    ]
+}

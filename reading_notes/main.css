@@ -21,3 +21,18 @@ img.resize {
 
 .pdfobject-container { height: 1200px;}
 .pdfobject { border: 1px solid #666; }
+
+#nav_pills_display {
+    display: flex;
+    justify-content: center;
+/*    background-color: white;*/
+}
+#nav_pills_display li{
+    background-color: white;
+}
+.book_thumbnail img{
+    height: 100px;
+    width: auto;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}

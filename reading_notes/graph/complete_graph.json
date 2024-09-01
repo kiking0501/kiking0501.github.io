@@ -1,0 +1,943 @@
+{
+    "nodes": [
+        {
+            "id": "1",
+            "book_key": "1",
+            "type": "img"
+        },
+        {
+            "id": "2",
+            "book_key": "2",
+            "type": "img"
+        },
+        {
+            "id": "3",
+            "book_key": "3",
+            "type": "img"
+        },
+        {
+            "id": "4",
+            "book_key": "4",
+            "type": "img"
+        },
+        {
+            "id": "5",
+            "book_key": "5",
+            "type": "img"
+        },
+        {
+            "id": "6",
+            "book_key": "6",
+            "type": "img"
+        },
+        {
+            "id": "1-1",
+            "bookmark_name": "Chapter 1: General",
+            "bookmark_page": 1,
+            "title": "General",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-2",
+            "bookmark_name": "Chapter 2: Motion",
+            "bookmark_page": 1,
+            "title": "Motion",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-3",
+            "bookmark_name": "Chapter 3: Arithematics",
+            "bookmark_page": 1,
+            "title": "Arithematics",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-4",
+            "bookmark_name": "Chapter 4: Set",
+            "bookmark_page": 1,
+            "title": "Set",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-5",
+            "bookmark_name": "Chapter 5: Function",
+            "bookmark_page": 1,
+            "title": "Function",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-6",
+            "bookmark_name": "Chapter 6: Abstract Algebra",
+            "bookmark_page": 2,
+            "title": "Abstract Algebra",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-7",
+            "bookmark_name": "Chapter 7: (Symmetry) Group",
+            "bookmark_page": 3,
+            "title": "(Symmetry) Group",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-8",
+            "bookmark_name": "Chapter 8: Axiomatics",
+            "bookmark_page": 6,
+            "title": "Axiomatics",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-9",
+            "bookmark_name": "Chapter 9: Counting, Finite & Infinite",
+            "bookmark_page": 7,
+            "title": "Counting, Finite & Infinite",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-10",
+            "bookmark_name": "Chapter 10: Topology",
+            "bookmark_page": 9,
+            "title": "Topology",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-11",
+            "bookmark_name": "Chapter 11: Network",
+            "bookmark_page": 9,
+            "title": "Network",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-12",
+            "bookmark_name": "Chapter 12: Topological Invariants",
+            "bookmark_page": 11,
+            "title": "Topological Invariants",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-13",
+            "bookmark_name": "Chapter 13: Algebraic Topology",
+            "bookmark_page": 12,
+            "title": "Algebraic Topology",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-14",
+            "bookmark_name": "Chapter 14: Hyperspace",
+            "bookmark_page": 14,
+            "title": "Hyperspace",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-15",
+            "bookmark_name": "Chapter 15: Linear Algebra",
+            "bookmark_page": 17,
+            "title": "Linear Algebra",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-16",
+            "bookmark_name": "Chapter 16: Real Analysis",
+            "bookmark_page": 19,
+            "title": "Real Analysis",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-17",
+            "bookmark_name": "Chapter 17: The theory of Probability",
+            "bookmark_page": 21,
+            "title": "The theory of Probability",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-18",
+            "bookmark_name": "Chapter 18: Computers & their Uses",
+            "bookmark_page": 22,
+            "title": "Computers & their Uses",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-19",
+            "bookmark_name": "Chapter 19: Application of Modern Mathematics",
+            "bookmark_page": 22,
+            "title": "Application of Modern Mathematics",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "1-20",
+            "bookmark_name": "Chapter 20: Foundations",
+            "bookmark_page": 22,
+            "title": "Foundations",
+            "book_key": "1",
+            "type": "text"
+        },
+        {
+            "id": "2-1",
+            "bookmark_name": "Chapter 1: Theory of Sets",
+            "bookmark_page": 1,
+            "title": "Theory of Sets",
+            "book_key": "2",
+            "type": "text"
+        },
+        {
+            "id": "2-2",
+            "bookmark_name": "Chapter 2: Metric Spaces",
+            "bookmark_page": 3,
+            "title": "Metric Spaces",
+            "book_key": "2",
+            "type": "text"
+        },
+        {
+            "id": "2-3",
+            "bookmark_name": "Chapter 3: Topological Spaces",
+            "bookmark_page": 10,
+            "title": "Topological Spaces",
+            "book_key": "2",
+            "type": "text"
+        },
+        {
+            "id": "2-4",
+            "bookmark_name": "Chapter 4: Connectedness",
+            "bookmark_page": 21,
+            "title": "Connectedness",
+            "book_key": "2",
+            "type": "text"
+        },
+        {
+            "id": "2-5",
+            "bookmark_name": "Chapter 5: Compactness",
+            "bookmark_page": 29,
+            "title": "Compactness",
+            "book_key": "2",
+            "type": "text"
+        },
+        {
+            "id": "3-1",
+            "bookmark_name": "Chapter 1: Preliminaries",
+            "bookmark_page": 1,
+            "title": "Preliminaries",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-2",
+            "bookmark_name": "Chapter 2: The Real Numbers",
+            "bookmark_page": 1,
+            "title": "The Real Numbers",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-3",
+            "bookmark_name": "Chapter 3: Sequence and Series",
+            "bookmark_page": 2,
+            "title": "Sequence and Series",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-4",
+            "bookmark_name": "Chapter 4: Limits",
+            "bookmark_page": 3,
+            "title": "Limits",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-5",
+            "bookmark_name": "Chapter 5: Continuous Functions",
+            "bookmark_page": 3,
+            "title": "Continuous Functions",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-6",
+            "bookmark_name": "Chapter 6: Differentiation",
+            "bookmark_page": 4,
+            "title": "Differentiation",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-7",
+            "bookmark_name": "Chapter 7: Riemann Integral",
+            "bookmark_page": 6,
+            "title": "Riemann Integral",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-8",
+            "bookmark_name": "Chapter 8: Sequences of Functions",
+            "bookmark_page": 8,
+            "title": "Sequences of Functions",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-9",
+            "bookmark_name": "Chapter 9: Infinite Series",
+            "bookmark_page": 10,
+            "title": "Infinite Series",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-10",
+            "bookmark_name": "Chapter 10: The Generalized Riemann Integral",
+            "bookmark_page": 13,
+            "title": "The Generalized Riemann Integral",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "3-11",
+            "bookmark_name": "Chapter 11: A Glimpse into Topology",
+            "bookmark_page": 15,
+            "title": "A Glimpse into Topology",
+            "book_key": "3",
+            "type": "text"
+        },
+        {
+            "id": "4-00",
+            "bookmark_name": "Lec 00: Introduction",
+            "bookmark_page": 1,
+            "title": "Introduction",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-01",
+            "bookmark_name": "Lec 01: Perceptron",
+            "bookmark_page": 1,
+            "title": "Perceptron",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-02",
+            "bookmark_name": "Lec 02: Linear Regression",
+            "bookmark_page": 2,
+            "title": "Linear Regression",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-03",
+            "bookmark_name": "Lec 03: Logistic Regression",
+            "bookmark_page": 2,
+            "title": "Logistic Regression",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-04",
+            "bookmark_name": "Lec 04: Support Vector Machines",
+            "bookmark_page": 3,
+            "title": "Support Vector Machines",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-05",
+            "bookmark_name": "Lec 05: Soft-Margin Support Vector Machines",
+            "bookmark_page": 3,
+            "title": "Soft-Margin Support Vector Machines",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-06",
+            "bookmark_name": "Lec 06: Reproducing Kernels",
+            "bookmark_page": 5,
+            "title": "Reproducing Kernels",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-08",
+            "bookmark_name": "Lec 08: Multi-Layer Perceptron",
+            "bookmark_page": 7,
+            "title": "Multi-Layer Perceptron",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-09",
+            "bookmark_name": "Lec 09: Convolutional Neural Network",
+            "bookmark_page": 9,
+            "title": "Convolutional Neural Network",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-10",
+            "bookmark_name": "Lec 10: Attention",
+            "bookmark_page": 10,
+            "title": "Attention",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-13",
+            "bookmark_name": "Lec 13: Decision Trees",
+            "bookmark_page": 18,
+            "title": "Decision Trees",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "4-14",
+            "bookmark_name": "Lec 14: Boosting vs Bagging (Ensembling)",
+            "bookmark_page": 19,
+            "title": "Boosting vs Bagging (Ensembling)",
+            "book_key": "4",
+            "type": "text"
+        },
+        {
+            "id": "5-1",
+            "bookmark_name": "Chapter 1: Pure Mathematics",
+            "bookmark_page": 1,
+            "title": "Pure Mathematics",
+            "book_key": "5",
+            "type": "text"
+        },
+        {
+            "id": "5-2",
+            "bookmark_name": "Chapter 2: Graphs",
+            "bookmark_page": 1,
+            "title": "Graphs",
+            "book_key": "5",
+            "type": "text"
+        },
+        {
+            "id": "5-3",
+            "bookmark_name": "Chapter 3: Planar Graphs",
+            "bookmark_page": 2,
+            "title": "Planar Graphs",
+            "book_key": "5",
+            "type": "text"
+        },
+        {
+            "id": "5-4",
+            "bookmark_name": "Chapter 4: Euler's Formula",
+            "bookmark_page": 4,
+            "title": "Euler's Formula",
+            "book_key": "5",
+            "type": "text"
+        },
+        {
+            "id": "5-5",
+            "bookmark_name": "Chapter 5: Platonic Graphs",
+            "bookmark_page": 6,
+            "title": "Platonic Graphs",
+            "book_key": "5",
+            "type": "text"
+        },
+        {
+            "id": "5-6",
+            "bookmark_name": "Chapter 6: Coloring",
+            "bookmark_page": 8,
+            "title": "Coloring",
+            "book_key": "5",
+            "type": "text"
+        },
+        {
+            "id": "5-7",
+            "bookmark_name": "Chapter 7: The Genus of a Graph",
+            "bookmark_page": 8,
+            "title": "The Genus of a Graph",
+            "book_key": "5",
+            "type": "text"
+        },
+        {
+            "id": "5-8",
+            "bookmark_name": "Chapter 8: Euler Walks and Hamilton Walks",
+            "bookmark_page": 12,
+            "title": "Euler Walks and Hamilton Walks",
+            "book_key": "5",
+            "type": "text"
+        },
+        {
+            "id": "6-1",
+            "bookmark_name": "Chapter 1: Introduction",
+            "bookmark_page": 1,
+            "title": "Introduction",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
+            "id": "6-2",
+            "bookmark_name": "Chapter 2: Linear Algebra",
+            "bookmark_page": 2,
+            "title": "Linear Algebra",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
+            "id": "6-3",
+            "bookmark_name": "Chapter 3: Probability and Information Theory",
+            "bookmark_page": 7,
+            "title": "Probability and Information Theory",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
+            "id": "6-4",
+            "bookmark_name": "Chapter 4: Numerical Computation",
+            "bookmark_page": 15,
+            "title": "Numerical Computation",
+            "book_key": "6",
+            "type": "text"
+        },
+        {
+            "id": "6-5",
+            "bookmark_name": "Chapter 5: Machine Learning Basics",
+            "bookmark_page": 19,
+            "title": "Machine Learning Basics",
+            "book_key": "6",
+            "type": "text"
+        }
+    ],
+    "links": [
+        {
+            "source": "1",
+            "target": "1-1",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-2",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-3",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-4",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-5",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-6",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-7",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-8",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-9",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-10",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-11",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-12",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-13",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-14",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-15",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-16",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-17",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-18",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-19",
+            "type": "contains"
+        },
+        {
+            "source": "1",
+            "target": "1-20",
+            "type": "contains"
+        },
+        {
+            "source": "2",
+            "target": "2-1",
+            "type": "contains"
+        },
+        {
+            "source": "2",
+            "target": "2-2",
+            "type": "contains"
+        },
+        {
+            "source": "2",
+            "target": "2-3",
+            "type": "contains"
+        },
+        {
+            "source": "2",
+            "target": "2-4",
+            "type": "contains"
+        },
+        {
+            "source": "2",
+            "target": "2-5",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-1",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-2",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-3",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-4",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-5",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-6",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-7",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-8",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-9",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-10",
+            "type": "contains"
+        },
+        {
+            "source": "3",
+            "target": "3-11",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-00",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-01",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-02",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-03",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-04",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-05",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-06",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-08",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-09",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-10",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-13",
+            "type": "contains"
+        },
+        {
+            "source": "4",
+            "target": "4-14",
+            "type": "contains"
+        },
+        {
+            "source": "5",
+            "target": "5-1",
+            "type": "contains"
+        },
+        {
+            "source": "5",
+            "target": "5-2",
+            "type": "contains"
+        },
+        {
+            "source": "5",
+            "target": "5-3",
+            "type": "contains"
+        },
+        {
+            "source": "5",
+            "target": "5-4",
+            "type": "contains"
+        },
+        {
+            "source": "5",
+            "target": "5-5",
+            "type": "contains"
+        },
+        {
+            "source": "5",
+            "target": "5-6",
+            "type": "contains"
+        },
+        {
+            "source": "5",
+            "target": "5-7",
+            "type": "contains"
+        },
+        {
+            "source": "5",
+            "target": "5-8",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-1",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-2",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-3",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-4",
+            "type": "contains"
+        },
+        {
+            "source": "6",
+            "target": "6-5",
+            "type": "contains"
+        },
+        {
+            "source": "1-10",
+            "target": "2-3",
+            "type": "related",
+            "remark": "Overview/Topology -> Topology/Topological Spaces"
+        },
+        {
+            "source": "1-11",
+            "target": "5-4",
+            "type": "related",
+            "remark": "Overview/Network -> Graph Theory/Euler's Formula"
+        },
+        {
+            "source": "1-11",
+            "target": "5-6",
+            "type": "related",
+            "remark": "Overview/Network -> Graph Theory/Coloring"
+        },
+        {
+            "source": "1-12",
+            "target": "5-7",
+            "type": "related",
+            "remark": "Overview/Topological Invariants -> Graph Theory/Genus"
+        },
+        {
+            "source": "1-13",
+            "target": "2-4",
+            "type": "related",
+            "remark": "Overview/Algebraic Topology -> Topology/Connectedness"
+        },
+        {
+            "source": "1-14",
+            "target": "5-7",
+            "type": "related",
+            "remark": "Overview/Hyperspace ->  Graph Theory/Genus"
+        },
+        {
+            "source": "1-15",
+            "target": "6-2",
+            "type": "related",
+            "remark": "Overview/Linear Algebra ->  DL/Linear Algebra"
+        },
+        {
+            "source": "1-16",
+            "target": "3-3",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Real Analysis/Sequence and Series"
+        },
+        {
+            "source": "1-16",
+            "target": "3-4",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Real Analysis/Limits"
+        },
+        {
+            "source": "1-16",
+            "target": "3-9",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Real Analysis/Infinite Series"
+        },
+        {
+            "source": "3-10",
+            "target": "6-3",
+            "type": "related",
+            "remark": "Real Analysis/The Generalized Riemann Integral -> DL/Probability & Information Theory"
+        },
+        {
+            "source": "3-11",
+            "target": "2-2",
+            "type": "related",
+            "remark": "Real Analysis/Glipse of Topology ->  Topology/Theory of Metric Spaces"
+        },
+        {
+            "source": "3-11",
+            "target": "2-5",
+            "type": "related",
+            "remark": "Real Analysis/Glipse of Topology ->  Topology/Compactness"
+        },
+        {
+            "source": "4-02",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/Linear Regression ->  DL/ML Basics"
+        },
+        {
+            "source": "4-03",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/Logistic Regression ->  DL/ML Basics"
+        },
+        {
+            "source": "4-04",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/SVM ->  DL/ML Basics"
+        },
+        {
+            "source": "4-06",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/Reproducing Kernels ->  DL/ ML Basics"
+        },
+        {
+            "source": "4-08",
+            "target": "6-4",
+            "type": "related",
+            "remark": "ML/Multi-layer Perceptron ->  DL/ Numerical Computation"
+        },
+        {
+            "source": "4-13",
+            "target": "6-5",
+            "type": "related",
+            "remark": "ML/Decision Trees ->  DL/ML Basics"
+        }
+    ]
+}

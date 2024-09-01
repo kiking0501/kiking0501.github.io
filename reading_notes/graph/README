@@ -1,0 +1,13 @@
+## 1. Generate bookmark files
+
+Navigate to `bookmarks/`, follow instructions there to generate the bookmark files for each PDF file under `notes_pdf/`.
+
+
+## 2. Generate graph file
+
+Come back to `graph/`, run `python generate_graph_json.py --core_count <pdf_count> --output_graph `complete_graph.json` to generate the full graph JSON file.
+
+
+## 3 [Optional] Modify related edges
+
+Modify the `relation_edges.json` to add more connected edges between the bookmark-nodes of each PDF file.

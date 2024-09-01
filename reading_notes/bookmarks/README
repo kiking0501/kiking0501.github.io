@@ -1,0 +1,22 @@
+
+###1. Dump Metadata
+
+pdftk <mybigfile>.pdf data_dump output <metadata>.txt
+
+
+### 2. Modify Bookmark
+
+BookmarkBegin
+BookmarkTitle: My first bookmark
+BookmarkLevel: 1
+BookmarkPageNumber: 2
+
+
+### 3. Add new Metadata to PDF
+
+pdftk mybigfile.pdf update_info bookmarks.txt output mynewfile.pdf
+
+
+### Example
+
+pdftk ../nodes_pdf/kiking_notes_01_<...> data_dump output 1_bookmark.txt
