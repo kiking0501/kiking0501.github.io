@@ -33,7 +33,7 @@ function display_graph() {
         const material = new THREE.SpriteMaterial({ map: imgTexture });
         const sprite = new THREE.Sprite(material);
 
-        var discountFactor = 2.0
+        var discountFactor = 0.5
         sprite.scale.set(
             imgElement.width / discountFactor,
             imgElement.height * (imgElement.width / imgElement.naturalWidth) / discountFactor
@@ -45,29 +45,33 @@ function display_graph() {
         const sprite = new SpriteText(title);
         sprite.material.depthWrite = false; // make sprite background transparent
         sprite.color = color;
-        sprite.textHeight = 6;
+        sprite.textHeight = 15;
+        sprite.strokeColor = 'black';
+        sprite.strokeWidth = 3;
+
         return sprite;
     }
 
+    var highlightLinks = new Set();
 
-    const Graph = ForceGraph3D()(document.getElementById('section_graph'))
+    const Graph = ForceGraph3D({ controlType: 'orbit' })(document.getElementById('section_graph'))
       .width(750)
       .height(1200)
       .backgroundColor('black')
-      .showNavInfo(false)
+      .showNavInfo(true)
       .jsonUrl('./graph/complete_graph.json')
-      .dagMode('zin')
-      .zoomToFit(10, 20, node => true)
+      .dagMode('zin')  //    .zoomToFit(20, 100, node => true)
       .linkColor((link) => {
-        if (link.type == "contains") { return reading_info[link.source]['color'] };
+        if (link.type == "contains") { return reading_info[link.source[0]]['color'] };
         if (link.type == "related") { return 'red'}
         if (link.type == "read_sequence") { return 'lightgrey' }
       })
       .linkOpacity(.5)
       .linkWidth((link)=> {
-        if (link.type == "contains") { return 0 };
-        if (link.type == "related") { return 2 };
-        if (link.type == "read_sequence") { return 0 }        
+        var hlWidth = highlightLinks.has(link)? 2:0
+        if (link.type == "contains") { return 0 + hlWidth};
+        if (link.type == "related") { return 3 + hlWidth};
+        if (link.type == "read_sequence") { return 0 + hlWidth}; 
       })
       .nodeThreeObject((node) => {
         if (node.type == "img") {
@@ -83,8 +87,15 @@ function display_graph() {
         } else {
             load_book(node.book_key);
         }
+      })
+      .onLinkHover(link=> {
+        // highlightLinks.clear();
+        // if (link) { 
+        //     highlightLinks.add(link);
+        //     Graph.linkWidth(Graph.linkWidth());
+        // }
       });
-      Graph.d3Force('charge').strength(-150);
+      Graph.d3Force('charge').strength(-300);
 }
 
 
