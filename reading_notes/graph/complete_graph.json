@@ -3092,43 +3092,85 @@
             "source": "1-12",
             "target": "5-7",
             "type": "related",
-            "remark": "Overview/Topological Invariants -> Graph Theory/Genus"
+            "remark": "Overview/Topological Invariants -> Graph Theory/The Genus"
         },
         {
             "source": "1-13",
-            "target": "2-4",
+            "target": "2-4-7",
             "type": "related",
-            "remark": "Overview/Algebraic Topology -> Topology/Connectedness"
+            "remark": "Overview/Algebraic Topology -> Topology/Homotopic Paths and the Fundamental Group"
         },
         {
             "source": "1-14",
             "target": "5-7",
             "type": "related",
-            "remark": "Overview/Hyperspace ->  Graph Theory/Genus"
+            "remark": "Overview/Hyperspace ->  Graph Theory/The Genus"
         },
         {
             "source": "1-15",
             "target": "6-2",
             "type": "related",
-            "remark": "Overview/Linear Algebra ->  DL/Linear Algebra"
+            "remark": "Overview/Linear Algebra ->  Deep Learning/Linear Algebra"
         },
         {
             "source": "1-16",
-            "target": "3-3",
+            "target": "3-3-1",
             "type": "related",
-            "remark": "Overview/Real Analysis ->  Real Analysis/Sequence and Series"
+            "remark": "Overview/Real Analysis ->  Real Analysis/Sequence and their limits"
         },
         {
             "source": "1-16",
+            "target": "3-3-6",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Real Analysis/Introduction to Infinite Series"
+        },
+        {
+            "source": "1-16",
+            "target": "3-5",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Real Analysis/Continuous Functions"
+        },
+        {
+            "source": "1-16",
+            "target": "2-4-4",
+            "type": "related",
+            "remark": "Overview/Real Analysis ->  Topology/Some Applications of Connectedness"
+        },
+        {
+            "source": "1-17",
+            "target": "6-3",
+            "type": "related",
+            "remark": "Overview/The theory of Probability ->  Deep Learning/Probability & Information Theory"
+        },
+        {
+            "source": "2-2-3",
+            "target": "3-5",
+            "type": "related",
+            "remark": "Topology/Continuity ->  Real Analysis/Continuous Functions"
+        },
+        {
+            "source": "2-2-5",
             "target": "3-4",
             "type": "related",
-            "remark": "Overview/Real Analysis ->  Real Analysis/Limits"
+            "remark": "Topology/Limits ->  Real Analysis/Limits"
         },
         {
-            "source": "1-16",
-            "target": "3-9",
+            "source": "2-2-8",
+            "target": "3-3-1",
             "type": "related",
-            "remark": "Overview/Real Analysis ->  Real Analysis/Infinite Series"
+            "remark": "Topology/An Infinite Dimensional Euclidean Space ->  Real Analysis/Sequence and their limits"
+        },
+        {
+            "source": "2-3-9",
+            "target": "1-7",
+            "type": "related",
+            "remark": "Topology/Categories and Functors ->  Overview/(Symmetry) Group"
+        },
+        {
+            "source": "2-4-7",
+            "target": "1-7",
+            "type": "related",
+            "remark": "Topology/Homotopic Paths and the Fundamental Group ->  Overview/(Symmetry) Group"
         },
         {
             "source": "3-10",
@@ -3137,52 +3179,64 @@
             "remark": "Real Analysis/The Generalized Riemann Integral -> DL/Probability & Information Theory"
         },
         {
-            "source": "3-11",
-            "target": "2-2",
+            "source": "3-11-2",
+            "target": "2-5-2",
             "type": "related",
-            "remark": "Real Analysis/Glipse of Topology ->  Topology/Theory of Metric Spaces"
+            "remark": "Real Analysis/Glipse of Topology ->  Topology/Compact Topological Spaces"
         },
         {
             "source": "3-11",
-            "target": "2-5",
+            "target": "2-2-2",
             "type": "related",
-            "remark": "Real Analysis/Glipse of Topology ->  Topology/Compactness"
+            "remark": "Real Analysis/Glipse of Topology ->  Topology/Metric Space"
         },
         {
             "source": "4-02",
-            "target": "6-5",
+            "target": "6-5-7-1",
             "type": "related",
-            "remark": "ML/Linear Regression ->  DL/ML Basics"
+            "remark": "Machine Learning/Linear Regression -> Deep Learning/Probabilisitic Supervised Learning"
         },
         {
             "source": "4-03",
-            "target": "6-5",
+            "target": "6-5-7-1",
             "type": "related",
-            "remark": "ML/Logistic Regression ->  DL/ML Basics"
+            "remark": "Machine Learning/Logistic Regression -> Deep Learning/Probabilisitic Supervised Learning"
         },
         {
             "source": "4-04",
-            "target": "6-5",
+            "target": "6-5-7-2",
             "type": "related",
-            "remark": "ML/SVM ->  DL/ML Basics"
+            "remark": "Machine Learning/Support Vector Machine -> Deep Learning/Support Vector Machine"
         },
         {
             "source": "4-06",
-            "target": "6-5",
+            "target": "6-5-7-2",
             "type": "related",
-            "remark": "ML/Reproducing Kernels ->  DL/ ML Basics"
+            "remark": "Machine Learning/Reproducing Kernels ->  Deep Learning/Support Vector Machine"
+        },
+        {
+            "source": "4-06",
+            "target": "6-4-4",
+            "type": "related",
+            "remark": "Machine Learning/Reproducing Kernels ->  Deep Learning/Constrained Optimization"
         },
         {
             "source": "4-08",
-            "target": "6-4",
+            "target": "6-5-9",
             "type": "related",
-            "remark": "ML/Multi-layer Perceptron ->  DL/ Numerical Computation"
+            "remark": "Machine Learning/Multi-layer Perceptron ->  Deep Learning/Stochastic Gradient Descent"
         },
         {
             "source": "4-13",
-            "target": "6-5",
+            "target": "6-5-7-3",
             "type": "related",
-            "remark": "ML/Decision Trees ->  DL/ML Basics"
+            "remark": "Machine Learning/Decision Trees ->  Deep Learning/Other Supervised Learning Algorithms"
+        },
+        {
+            "source": "5-4",
+            "target": "1-13",
+            "type": "related",
+            "remark": "Graph Theory/Euler's Formula -> Overview/Algebraic Topology"
         }
     ]
 }

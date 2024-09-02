@@ -61,8 +61,8 @@ function display_graph() {
       .backgroundColor('black')
       .showNavInfo(true)
       .jsonUrl(graph_file)
-      .dagMode('lr') 
-      .cameraPosition({z: 1400})
+      .dagMode('zin') 
+      .cameraPosition({x: -300, z: 1500})
       .linkColor((link) => {
         if (link.type == "contains") { return reading_info[link.source[0]]['color'] };
         if (link.type == "related") { return 'red'}
