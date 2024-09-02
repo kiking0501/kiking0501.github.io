@@ -33,7 +33,7 @@ function display_graph() {
         const material = new THREE.SpriteMaterial({ map: imgTexture });
         const sprite = new THREE.Sprite(material);
 
-        var discountFactor = 1
+        var discountFactor = 0.9
         sprite.scale.set(
             imgElement.width / discountFactor,
             imgElement.height * (imgElement.width / imgElement.naturalWidth) / discountFactor
@@ -45,24 +45,24 @@ function display_graph() {
         const sprite = new SpriteText(title);
         sprite.material.depthWrite = false; // make sprite background transparent
         sprite.color = color;
-        sprite.textHeight = 10 - level*2;
+        sprite.textHeight = 8 - level;
         sprite.strokeColor = 'black';
         sprite.strokeWidth = 3;
 
         return sprite;
     }
 
-
     const graph_file = './graph/complete_graph.json'
-    var highlightLinks = new Set();
+    const graph_container = document.getElementById('section_display');
 
     const Graph = ForceGraph3D({ controlType: 'orbit' })(document.getElementById('section_graph'))
-      .width(750)
+      .width(graph_container.clientWidth)
       .height(1200)
       .backgroundColor('black')
       .showNavInfo(true)
       .jsonUrl(graph_file)
       .dagMode('lr') 
+      .cameraPosition({z: 1400})
       .linkColor((link) => {
         if (link.type == "contains") { return reading_info[link.source[0]]['color'] };
         if (link.type == "related") { return 'red'}
@@ -70,9 +70,9 @@ function display_graph() {
       })
       .linkOpacity(.5)
       .linkWidth((link)=> {
-        var hlWidth = highlightLinks.has(link)? 2:0
+        var hlWidth = 0
         if (link.type == "contains") { return 0 + hlWidth};
-        if (link.type == "related") { return 3 + hlWidth};
+        if (link.type == "related") { return 1 + hlWidth};
         if (link.type == "read_sequence") { return 0 + hlWidth}; 
       })
       .nodeThreeObject((node) => {
@@ -92,15 +92,13 @@ function display_graph() {
             load_book(node.book_key);
         }
       })
-      .onLinkHover(link=> {
-        // highlightLinks.clear();
-        // if (link) { 
-        //     highlightLinks.add(link);
-        //     Graph.linkWidth(Graph.linkWidth());
-        // }
-      })
-      .zoomToFit(0, 500, node => true);
-      Graph.d3Force('charge').strength(-100);
+      .onNodeHover(node => {
+      });
+
+    Graph.d3Force('charge').strength(-100);
+    window.addEventListener('resize', () => {
+        Graph.width(graph_container.clientWidth);
+    });
 }
 
 

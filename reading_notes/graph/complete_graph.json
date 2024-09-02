@@ -1982,24 +1982,6 @@
             "title": "Metric Spaces",
             "book_key": "3",
             "type": "text"
-        },
-        {
-            "id": "3-1",
-            "bookmark_name": "E.1: A Continuous but nowhere Differntiable function",
-            "bookmark_page": 15,
-            "bookmark_level": 2,
-            "title": "A Continuous but nowhere Differntiable function",
-            "book_key": "3",
-            "type": "text"
-        },
-        {
-            "id": "3-2",
-            "bookmark_name": "E.2: A space-filling curve",
-            "bookmark_page": 16,
-            "bookmark_level": 2,
-            "title": "A space-filling curve",
-            "book_key": "3",
-            "type": "text"
         }
     ],
     "links": [
@@ -3086,16 +3068,6 @@
         {
             "source": "3-11",
             "target": "3-11-4",
-            "type": "contains"
-        },
-        {
-            "source": "3-11",
-            "target": "3-1",
-            "type": "contains"
-        },
-        {
-            "source": "3-11",
-            "target": "3-2",
             "type": "contains"
         },
         {

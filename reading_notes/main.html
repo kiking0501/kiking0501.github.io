@@ -14,6 +14,7 @@
 
         <script src="//unpkg.com/3d-force-graph"></script>
         <script type="importmap">{ "imports": { "three": "//unpkg.com/three/build/three.module.js" }}</script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
 
         <link rel="stylesheet" href="main.css">
         <script src="main.js" type="module"> </script>
@@ -99,7 +100,7 @@
             PDFObject.embed(
                 "./notes_pdf/kiking_notes_" + title + ".pdf",
                 "#notes_pdf",
-                Object.assign({}, pdf_options, fallbackLink)
+                Object.assign({}, pdf_options, fallbackLink + "#page=" + page)
             );
         }
     </script>
@@ -111,11 +112,11 @@
             <h4></h4>
 
             <div class="row">
-                <div class="col-lg-4" >
+                <div class="col-lg-5" id="section_display" >
                     <hr>
  
                     <ul class="nav nav-pills" id="nav_pills_display">
-                      <li class="" id="display_graph"><a href="#">CONNECT!</a></li>
+                      <li class="" id="display_graph"><a href="#">Knowledge Graph</a></li>
                       <li class="active" id="display_standard"><a href="#">Bookshelf View</a></li>
 
                     </ul>
@@ -136,7 +137,7 @@
 
                 </div>
 
-                <div class="col-lg-8" id="section_reading_notes">
+                <div class="col-lg-7" id="section_reading_notes">
                     <hr>
 
                     <div class="row">
