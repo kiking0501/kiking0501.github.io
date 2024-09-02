@@ -37,3 +37,6 @@ img.resize {
     padding-right:10px;
     padding-bottom: 10px;
 }
+#message_selected_page {
+    color: lightgrey;
+}

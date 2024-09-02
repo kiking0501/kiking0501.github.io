@@ -87,7 +87,11 @@ function display_graph() {
       })
       .onNodeClick((node) => {
         if (node.type == "text") {
-            load_book(node.book_key, node.bookmark_page)
+            load_book(node.book_key, node.bookmark_page);
+            $("#message_selected_page .title").html(node.title);
+            $("#message_selected_page .page").html(node.bookmark_page);
+            $("#message_selected_page").show();
+            
         } else {
             load_book(node.book_key);
         }

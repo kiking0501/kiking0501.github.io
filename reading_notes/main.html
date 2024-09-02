@@ -77,7 +77,10 @@
         function load_book(book_key, page) {
             var title = reading_info[book_key]['title'];
             var glink = reading_info[book_key]['glink'];
-            if (typeof page === 'undefined') { page = 1 };
+            if (typeof page === 'undefined') {
+                page = 1;
+                $("#message_selected_page").hide();
+            }
 
             const pdf_options = {
                 pdfOpenParams: {
@@ -100,7 +103,7 @@
             PDFObject.embed(
                 "./notes_pdf/kiking_notes_" + title + ".pdf",
                 "#notes_pdf",
-                Object.assign({}, pdf_options, fallbackLink + "#page=" + page)
+                Object.assign({}, pdf_options, fallbackLink)
             );
         }
     </script>
@@ -170,6 +173,8 @@
                             Part I on <span style="color:lightblue"> Linear Algebra, Probability & Information Theory, Numerical Computation, and Machine Learning Basics </span> <br>
                             <i>Last update: 2024-08-29</i>
                             </span>
+                            <br>
+                            <span id="message_selected_page" style="display:none;"> Selecting: [Page <span class="page"></span>] <span class="title"></span> </span>
                         </div>
                         <br>
                     </div>
