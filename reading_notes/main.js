@@ -32,10 +32,10 @@ function display_graph() {
         const material = new THREE.SpriteMaterial({ map: imgTexture });
         const sprite = new THREE.Sprite(material);
 
-        var discountFactor = 0.9
-        sprite.scale.set(
-            imgElement.width / discountFactor,
-            imgElement.height * (imgElement.width / imgElement.naturalWidth) / discountFactor
+        var discountFactor = 1
+        sprite.scale.set( 
+            150 / discountFactor,  // imgElement.width
+            imgElement.height * (150 / imgElement.naturalWidth) / discountFactor
         );
         return sprite;
     }
