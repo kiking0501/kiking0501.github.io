@@ -1,7 +1,6 @@
         
 $( document ).ready(function() {
-    display_book_covers();
-    display_graph();
+    display_book_covers(display_graph);
     $("#nav_pills_display").find("li").on('click', function(){change_nav_pill(this)});
     $("#display_graph").click();
 
@@ -70,11 +69,14 @@ function display_graph() {
       })
       .linkOpacity(.5)
       .linkWidth((link)=> {
-        var hlWidth = 0
-        if (link.type == "contains") { return 0 + hlWidth};
-        if (link.type == "related") { return 1 + hlWidth};
-        if (link.type == "read_sequence") { return 0 + hlWidth}; 
+        if (link.type == "related") { return 1 };
+        return 0;
       })
+      .linkDirectionalParticles((link)=> {
+        if (link.type == "related") { return 10};
+        return 0;
+      })
+      .linkDirectionalParticleWidth(1.5)
       .nodeThreeObject((node) => {
         if (node.type == "img") {
             return getImgSprite(node.book_key);
@@ -96,8 +98,6 @@ function display_graph() {
             load_book(node.book_key);
         }
       })
-      .onNodeHover(node => {
-      });
 
     Graph.d3Force('charge').strength(-100);
     window.addEventListener('resize', () => {
@@ -106,7 +106,7 @@ function display_graph() {
 }
 
 
-function display_book_covers() {
+function display_book_covers(callback) {
     var section_book_covers = $("#section_book_cover")
     section_book_covers.html("");
     for (let i = 0; i < order.length; i++) {
@@ -124,6 +124,7 @@ function display_book_covers() {
         $(img).attr("onclick", "load_book(" + book_key + ")");
         section_book_covers.append(book_cover.html());
     }
+    callback();
 }
 
 

@@ -1428,7 +1428,7 @@
         {
             "id": "4-05",
             "bookmark_name": "Lec 05: Soft-Margin Support Vector Machines",
-            "bookmark_page": 3,
+            "bookmark_page": 4,
             "bookmark_level": 1,
             "title": "Soft-Margin Support Vector Machines",
             "book_key": "4",
@@ -3077,6 +3077,12 @@
             "remark": "Overview/Topology -> Topology/Topological Spaces"
         },
         {
+            "source": "1-10",
+            "target": "2-5-7",
+            "type": "related",
+            "remark": "Overview/Topology -> Topology/Surfaces by Identification"
+        },
+        {
             "source": "1-11",
             "target": "5-4",
             "type": "related",
@@ -3093,6 +3099,12 @@
             "target": "5-7",
             "type": "related",
             "remark": "Overview/Topological Invariants -> Graph Theory/The Genus"
+        },
+        {
+            "source": "1-13",
+            "target": "5-4",
+            "type": "related",
+            "remark": "Overview/Algebraic Topology -> Graph Theory/Euler's Formula"
         },
         {
             "source": "1-13",
@@ -3173,12 +3185,6 @@
             "remark": "Topology/Homotopic Paths and the Fundamental Group ->  Overview/(Symmetry) Group"
         },
         {
-            "source": "3-10",
-            "target": "6-3",
-            "type": "related",
-            "remark": "Real Analysis/The Generalized Riemann Integral -> DL/Probability & Information Theory"
-        },
-        {
             "source": "3-11-2",
             "target": "2-5-2",
             "type": "related",
@@ -3233,10 +3239,16 @@
             "remark": "Machine Learning/Decision Trees ->  Deep Learning/Other Supervised Learning Algorithms"
         },
         {
-            "source": "5-4",
-            "target": "1-13",
+            "source": "6-3-12",
+            "target": "3-10-4",
             "type": "related",
-            "remark": "Graph Theory/Euler's Formula -> Overview/Algebraic Topology"
+            "remark": "Deep Learning/Technical Details of Continuous Variable -> Real Analysis/Convergence Theorem"
+        },
+        {
+            "source": "6-4-3-1",
+            "target": "3-6-4",
+            "type": "related",
+            "remark": "Deep Learning/Beyond the Gradient: Jacobian and Hessian Matrices -> Real Analysis/Taylor's Theorem"
         }
     ]
 }
