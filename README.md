@@ -11,6 +11,12 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 
 ## Changes
+
+### 2024-Sep
+
+- Created a new repository [knowledge-graph-of-readings](https://github.com/kiking0501/knowledge-graph-of-readings) for the reading notes page, modified the homepage to reflect the change
+
+
 ### 2024-Jul
 
 - Created a page to display my reading notes
