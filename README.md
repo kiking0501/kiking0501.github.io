@@ -1,4 +1,4 @@
-# kiking0501.github.io
+# [kiking0501.github.io](https://kiking0501.github.io/)
 
 
 
@@ -35,7 +35,7 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 - Created links in the homepage for [Wordle-Solver](https://kiking0501.github.io/Wordle-Solver), the master studies' resources site [MathDowsers@ARQMath](https://kiking0501.github.io/MathDowsers-ARQMath/), and the machine translation project ([Cantonese-Chinese Translation](https://github.com/kiking0501/Cantonese-Chinese-Translation)). 
 
-- Added back the link to [Shining Beauty of Mathematics]l(https://www.facebook.com/share/v/kYvmVUJP1oa3cvgN/)
+- Added back the link to [Shining Beauty of Mathematics](https://www.facebook.com/share/v/kYvmVUJP1oa3cvgN/)
 
 - Created a simple tracker of my daily progress.
 
