@@ -12,6 +12,11 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 ## Changes
 
+### 2025-Jan
+
+- Migrated most code away from this repository, to keep this place only serve as the Hompage of all my work. The removed code now live as separate repositories (still reachable via the Hompage!)
+
+
 ### 2024-Sep
 
 - Created a new repository [knowledge-graph-of-readings](https://github.com/kiking0501/knowledge-graph-of-readings) for the reading notes page, modified the homepage to reflect the change
@@ -28,9 +33,9 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 ### 2021-Feb
 
-- Created links in the homepage for Wordle-Solver, the master studies' resources site MathDowsers@ARQMath, and the machine translation project (Chinese to Cantonese). 
+- Created links in the homepage for [Wordle-Solver](https://kiking0501.github.io/Wordle-Solver), the master studies' resources site [MathDowsers@ARQMath](https://kiking0501.github.io/MathDowsers-ARQMath/), and the machine translation project ([Cantonese-Chinese Translation](https://github.com/kiking0501/Cantonese-Chinese-Translation)). 
 
-- Added back the link to Shining Beauty of Mathematics
+- Added back the link to [Shining Beauty of Mathematics]l(https://www.facebook.com/share/v/kYvmVUJP1oa3cvgN/)
 
 - Created a simple tracker of my daily progress.
 
@@ -41,6 +46,7 @@ Gradually, this site has become a personalized space to showcase works that are 
 - Created a Gallery page for a mobile game SINoAlice since I truly enjoy its graphics!
 
   *2020-Update:* Enriched the character collection and polished the page.
+  *2025-Update:* Moved the page to [a new location](https://github.com/kiking0501/Cantonese-Chinese-Translation)
   
   
 
@@ -50,6 +56,7 @@ Gradually, this site has become a personalized space to showcase works that are 
 - Created a Documentation page for my animation work ([The Polyhedramatics - Dance](https://github.com/kiking0501/polyhedramatics-dance-2018)) featured in The City Art Exhibition 2018, HKAPA.
 
   *2020-Update:* The documentation is not yet complete. Maybe it will be completed somedays!
+  *2025-Update:* Moved the page [to a new location](https://kiking0501.github.io/polyhedramatics-dance-2018/doc_html/doc/main.html)
   
   
 
