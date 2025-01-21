@@ -14,7 +14,8 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 ### 2025-Jan
 
-- Migrated most code away from this repository, to keep this place only serve as the Hompage of all my work. The removed code now live as separate repositories (still reachable via the Hompage!)
+- The new [Art Gallery](https://github.com/kiking0501/kiking-art-gallery) page is now live! Some of the links are moved there instead since they capture newer artworks after 2016 (incluing Polyhedaramatics The Dance, Shinig Beauty of Mathematcs, and the new social media accounts).
+- The link to the old gallery page is removed (but the code remains - for a salute to the beginning of this repository :) )
 
 
 ### 2024-Sep
@@ -48,8 +49,6 @@ Gradually, this site has become a personalized space to showcase works that are 
   *2020-Update:* Enriched the character collection and polished the page.
   *2025-Update:* Moved the page to [a new location](https://github.com/kiking0501/Cantonese-Chinese-Translation)
   
-  
-
 
 ### 2018-Aug
 
