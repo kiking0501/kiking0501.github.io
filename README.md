@@ -14,7 +14,7 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 ### 2025-Jan
 
-- The new [Art Gallery](https://github.com/kiking0501/kiking-art-gallery) page is now live! Some of the links are moved there instead since they capture newer artworks after 2016 (incluing Polyhedaramatics The Dance, Shinig Beauty of Mathematcs, and the new social media accounts).
+- The new [Art Gallery](https://kiking0501.github.io/kiking-art-gallery/) page is now live! Some of the links are moved there instead since they capture more recent artworks after 2016 (incluing Polyhedramatics The Dance, Shining Beauty of Mathematics, and the new social media accounts).
 - The link to the old gallery page is removed (but the code remains - for a salute to the beginning of this repository :) )
 
 
