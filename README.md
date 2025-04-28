@@ -46,15 +46,15 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 - Created a Gallery page for a mobile game SINoAlice since I truly enjoy its graphics!
 
-  *2020-Update:* Enriched the character collection and polished the page.
-  *2025-Update:* Moved the page to [a new location](https://github.com/kiking0501/Cantonese-Chinese-Translation)
+  *2020-Update:* Enriched the character collection and polished the page. <br>
+  *2025-Update:* Moved the page to [a new location](https://kiking0501.github.io/gallery_SINoAlice/), Added back character collections
   
 
 ### 2018-Aug
 
 - Created a Documentation page for my animation work ([The Polyhedramatics - Dance](https://github.com/kiking0501/polyhedramatics-dance-2018)) featured in The City Art Exhibition 2018, HKAPA.
 
-  *2020-Update:* The documentation is not yet complete. Maybe it will be completed somedays!
+  *2020-Update:* The documentation is not yet complete. Maybe it will be completed somedays! <br>
   *2025-Update:* Moved the page [to a new location](https://kiking0501.github.io/polyhedramatics-dance-2018/doc_html/doc/main.html)
   
   
