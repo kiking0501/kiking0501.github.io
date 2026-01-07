@@ -12,6 +12,10 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 ## Changes
 
+### 2026-Jan
+- Added a link in the homepage for the newly created page [Graph of Research Papers](https://kiking0501.github.io/graph-of-research-papers)
+
+
 ### 2025-Jan
 
 - The new [Art Gallery](https://kiking0501.github.io/kiking-art-gallery/) page is now live! Some of the links are moved there instead since they capture more recent artworks after 2016 (incluing Polyhedramatics The Dance, Shining Beauty of Mathematics, and the new social media accounts).
