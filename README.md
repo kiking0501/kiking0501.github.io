@@ -6,11 +6,15 @@ Originally, I started this site as a learning task for Python (...)
 
 
 
-Gradually, this site has become a personalized space to showcase works that are motivated by self-interest, obsession, coffee, ... or *中二病* . No regret!
+Gradually, this site has become a personalized space to showcase works that are motivated by self-interest, obsession, and coffee. No regrets!
 
 
 
 ## Changes
+
+### 2026-Oct
+- Added a link in the homepage for my industry publication [How we rebuilt search ranking at Faire with deep learning](https://craft.faire.com/how-we-rebuilt-search-ranking-at-faire-with-deep-learning-14f080679c83)
+
 
 ### 2026-Jan
 - Added a link in the homepage for the newly created page [Graph of Research Papers](https://kiking0501.github.io/graph-of-research-papers)
