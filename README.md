@@ -12,6 +12,10 @@ Gradually, this site has become a personalized space to showcase works that are 
 
 ## Changes
 
+### 2026-Nov
+- Added a new [Online Museum](https://kiking0501.github.io/kiking-art-gallery/3d-museum) page for a virtual museum experience of my art.
+- ...here comes the era of agentic coding! 
+
 ### 2026-Oct
 - Added a link in the homepage for my industry publication [How we rebuilt search ranking at Faire with deep learning](https://craft.faire.com/how-we-rebuilt-search-ranking-at-faire-with-deep-learning-14f080679c83)
 
